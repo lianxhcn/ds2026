@@ -1,0 +1,228 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - Lecture/reg_ols/figs/**
+
+book:
+  title: "数据分析与经济决策"
+  author: "连玉君"
+  date: today
+  date-format: iso
+  repo-actions: [edit, issue]
+
+  sidebar:
+    title: "25PB"
+    logo: images/book-logo.png
+    logo-href: https://lianxhcn.github.io/ds2026/
+    style: floating
+    search: true
+    background: light
+    tools:
+      - icon: github
+        href: https://github.com/lianxhcn/ds2026
+      - icon: house-fill
+        href: https://www.lianxh.cn
+  
+  page-footer:
+    center: |
+      [lianxh.cn](https://www.lianxh.cn)
+    right: |
+      Support: <a href="https://lianxhcn.github.io/quarto_book/">Quarto</a>
+  
+  favicon: images/book-logo.png
+  site-url: https://lianxhcn.github.io/ds2026/
+  editor: source
+#  downloads: [pdf]
+#  output-file: "ds2026"
+
+#----------------------- Chapters ---------------
+  chapters:
+    - index.qmd
+    - Lecture/00_intro.md
+    - Lecture/00_setup.qmd
+    - Lecture/01_homework.md
+
+    - part: "**环境配置**"
+      chapters:
+        - Lecture/00-setup/01_00_coding_with_AI.ipynb
+        - Lecture/00-setup/01_01_install_anaconda.ipynb
+        - Lecture/00-setup/01_02_jupyter_notebook.ipynb
+        - Lecture/00-setup/01_03_install_FAQs.ipynb
+        - Lecture/00-setup/01_04_markdown.md
+        - Lecture/00-setup/01_06_conda_env.qmd
+
+    - part: "**数据分析**"
+      chapters:
+        - Lecture/01-DS-intro/what-is-ds.qmd
+        - Lecture/data_get_data/lecture_get_data.ipynb 
+        - Lecture/data_get_data/data_02_get_data_GMD.ipynb
+        - Lecture/data_get_data/data_03_TS_SZ_index.ipynb
+        - Lecture/data_store_structure/lecture_data_management_organization.ipynb
+        - Lecture/data_manage/lecture_data_management.md
+        - Lecture/data_clean/lecture_data_clean.ipynb 
+    
+    - part: "**可视化**"
+      chapters: 
+        - Lecture/data_visual/graph_01_intro.ipynb
+        - Lecture/data_visual/graph_dis_box_violin.ipynb
+        - Lecture/data_visual/graph_dis_histogram.ipynb
+        - Lecture/data_visual/graph_dis_kdensity.ipynb
+        - Lecture/data_visual/lec_distribution.md
+        - Lecture/data_visual/lec_distribution_codes.ipynb
+        - Lecture/data_visual/lec_visualization.md
+
+    - part: "**数据爬取**"
+      chapters:
+        - Lecture/crawing/craw_01_introduction.md
+        - Lecture/crawing/craw_02_sec01_lingnan_prompt.md
+        - Lecture/crawing/craw_02_sec02_lingnan_dialog.ipynb
+
+    - part: "**线性回归分析**"
+      chapters:
+        - Lecture/reg_ols/ols_visual_3D.ipynb
+
+    # - part: "**面板模型：固定效应**"
+    #   chapters: 
+    #     - Lecture/panel_fe/panel_HDFE.md
+    #     - Lecture/panel_fe/panel_IntFE.md
+
+    # - part: "**面板变系数模型**"
+    #   chapters: 
+    #     - Lecture/panel_xtplfc/01_Panel_threshold_01_theory.ipynb
+    #     - Lecture/panel_xtplfc/02_Panel_threshold_02_codes.ipynb
+    #     - Lecture/panel_xtplfc/04_xtplfc的直观解读及xthreg实现.ipynb
+    #     - Lecture/panel_xtplfc/05_解读xtplfc的原理_样条基函数.ipynb
+    #     - Lecture/panel_xtplfc/Du_2021_EE_中文精要.md
+
+    # - part: "**受限因变量**"
+    #   chapters:
+    #     - Lecture/limit_dep_intro/01_overview_lec.qmd
+    #     - Lecture/limit_dep_intro/01_overview_codes.ipynb
+    #     - Lecture/limit_dep_logit/02_a_binary_lec.qmd
+    #     - Lecture/limit_dep_logit/02_b_binary_codes.ipynb
+    #     - Lecture/limit_dep_logit/02_c_binary_case.ipynb
+    #     - Lecture/reg_logit/probability_models.qmd
+    #     - Lecture/limit_dep_tobit/04_tobit_model_lec_v7_.ipynb
+    #     - Lecture/limit_dep_tobit/04_tobit_model_codes_v7.ipynb
+    #     - Lecture/limit_dep_trunc_twopart/05_truncated_twopart_lec_v4.ipynb
+    #     - Lecture/limit_dep_trunc_twopart/05_truncated_twopart_codes_v4.ipynb
+    #     - Lecture/limit_dep_heckman/06_heckman_lec.ipynb
+    #     - Lecture/limit_dep_heckman/06_heckman_codes.ipynb
+        # - Lecture/limit_dep_tobit-plan/limit_dep_models_lec.qmd
+        # - Lecture/limit_dep_tobit-plan/limit_dep_models_codes.ipynb
+        # - Lecture/limit_dep_models/limit_dep_models_lec.qmd
+        # - Lecture/limit_dep_models/limit_dep_models_codes.ipynb
+
+    # - part: "**估计方法**"
+    #   chapters:
+    #     - Lecture/method_MLE/MLE_lec.qmd
+    #     - Lecture/method_MLE/MLE_codes.ipynb
+    #     - Lecture/method_MLE/MLE_case.ipynb
+  
+    - part: "**机器学习**"
+      chapters:
+        - Lecture/ml_tree/ml_tree_lec.ipynb
+        - Lecture/ml_tree/ml_tree_codes.ipynb
+        - Lecture/ml_SVM/ml_SVM_lec.ipynb
+        - Lecture/ml_SVM/ml_SVM_codes.ipynb
+
+    # - part: "**文本分析**"
+    #   chapters:
+    #     - Lecture/text_analysis/lecture_text_01_ailn.md
+    #     - Lecture/text_analysis/lecture_text_02_ailn.md
+    #     - Lecture/text_analysis/lecture_text_analysis_01_claude.ipynb
+    #     - Lecture/text_analysis/lecture_text_analysis_02_claude.ipynb
+
+
+    # - part: "**附录：Python 提示词**"
+    #   chapters:
+    #     - appendix_python/index.qmd
+    #     - appendix_python/a1_setup.qmd
+    #     - appendix_python/a2_project.qmd
+    #     - appendix_python/a3_concepts.qmd
+    #     - appendix_python/a4_data.qmd
+    #     - appendix_python/a5_visualization.qmd
+    #     - appendix_python/a6_modeling.qmd
+    #     - appendix_python/a7_results.qmd
+    #     - appendix_python/a8_workflow.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    linestretch: 1.6
+    fontsize: 11.5pt
+    number-sections: true
+    link-external-newwindow: true
+    highlight: true
+    highlight-style: atom-one
+    code-fold: false
+    code-line-numbers: false
+    code-overflow: wrap
+    css: styles.css
+    callout-appearance: default
+    md-extensions:
+      - callout
+  # pdf:
+  #   output-file: "ds2026"
+  #   documentclass: book
+  #   classoption: oneside
+  #   papersize: a4
+  #   fontsize: 10.5pt
+  #   linestretch: 1.1
+  #   code-overflow: wrap
+  #   code-line-numbers: false
+  #   colorlinks: true
+  #   linkcolor: blue
+  #   urlcolor: blue
+  #   citecolor: blue
+  #   include-in-header:
+  #     text: |
+  #       \PassOptionsToPackage{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}{hyperref}
+  #       \usepackage{ctex}
+  #       \usepackage[normalem]{ulem}
+  #       \usepackage{fvextra}
+  #       \DefineVerbatimEnvironment{Highlighting}{Verbatim}{
+  #         breaksymbolleft={},
+  #         breaksymbolright={},
+  #         breaklines=true,
+  #         breakanywhere=true,
+  #         fontsize=\small,
+  #         commandchars=\\\{\}
+  #       }
+  #       \usepackage{geometry}
+  #       \geometry{
+  #         a4paper,
+  #         left=2.5cm,
+  #         right=2.5cm,
+  #         top=2.8cm,
+  #         bottom=2.2cm
+  #       }
+  #       \renewcommand{\cleardoublepage}{\clearpage}
+  #       \usepackage{fancyhdr}
+  #       \pagestyle{fancy}
+  #       \fancyfoot[C]{\small 在线版：\url{https://lianxhcn.github.io/ds2026/}}
+  #       \fancyfoot[R]{\thepage}
+  #       \renewcommand{\footrulewidth}{0.4pt}
+  #   toc: true
+  #   number-sections: true
+
+#language:
+#  chapter-title: "第"
+
+# 统一设置全书公式引用格式
+crossref:
+  eq-prefix: ""       # 去掉 Equation 文字，只留 (2.1)
+  # fig-prefix: ""      # 去掉 Figure 文字，只留 (2.1)
+  # tbl-prefix: ""      # 去掉 Table 文字，只留 (2.1)
+  sec-prefix: ""      # 去掉 Section 文字，只留 (2.1)
+  chapters: true      # 启用章节编号（2.1、3.2）
+  fig-title: "图"
+  tbl-title: "表"
+  eq-title: "式"
+fig-cap-location: bottom    # New: 图注位置
+

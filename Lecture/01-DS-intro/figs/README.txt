@@ -1,0 +1,12 @@
+ds_intro_fig01_goal_to_decision.png
+ds_intro_fig02_data_generation_process.png
+ds_intro_fig03_four_analysis_tasks.png
+ds_intro_fig04_analysis_process.png
+ds_intro_fig05_data_types.png
+ds_intro_fig06_data_sources.png
+ds_intro_fig07_methods_types.png
+ds_intro_fig08_bias_sources.png
+ds_intro_fig09_decision_framework.png
+ds_intro_fig10_japan_timeline.png
+ds_intro_fig11_tokyo_house_price_index.png
+ds_intro_fig12_japan_impact_overview.png

@@ -1,0 +1,403 @@
+# 图表排版规范：尺寸、字号与全书风格统一
+
+> **本章定位：** 本章不教你如何画图，而是帮你解决一个更基础、更折磨人的问题——为什么同样写了 `fontsize=11`，图里的字有时候大、有时候小？为什么图片在手机上看起来正常，打印出来却模糊一片？如何让全书几十张图的风格保持一致，而不是每次让 AI 重新猜你的意图？
+
+------------------------------------------------------------------------
+
+## 一、三个最容易混淆的概念
+
+在动手配置之前，我们需要先把三个核心概念区分清楚。很多排版问题，根源就在于把这三件事搞混了。
+
+### 1.1 figsize：图片的"画布尺寸"
+
+`figsize=(width, height)` 是 Matplotlib 中最基础的尺寸参数，单位是**英寸（inch）**。
+
+``` python
+fig, ax = plt.subplots(figsize=(8, 4))
+```
+
+这行代码的意思是：创建一块宽 8 英寸、高 4 英寸的画布。**注意，这里的"英寸"是一个逻辑单位，与屏幕像素没有直接关系。**
+
+### 1.2 dpi：分辨率，决定"一英寸画多少个点"
+
+`dpi`（dots per inch，每英寸点数）决定了图片最终的像素密度。
+
+-   屏幕显示通常使用 72–96 dpi
+-   网页发布建议 150 dpi
+-   印刷出版建议 300 dpi
+
+**图片实际像素 = figsize × dpi**
+
+一张 `figsize=(8, 4)`、`dpi=100` 的图，实际输出为 800×400 像素。\
+同样的 figsize，`dpi=300` 则输出 2400×1200 像素——清晰度提升，但文件变大。
+
+### 1.3 字号与图片尺寸的耦合关系：问题根源在这里
+
+这是最容易踩坑的地方。Matplotlib 中，**字号的单位是"点（pt）"，而"点"是相对于 figsize 渲染的**。
+
+具体来说：当你将图片放大（figsize 变大），图中文字的绝对像素尺寸随之增大，但在实际文档中显示时，图片会被等比缩小以适应页面宽度，视觉上字反而变小了。
+
+**一个直观的例子：**
+
+``` python
+# 情形 A：小画布，字号 11
+fig, ax = plt.subplots(figsize=(4, 3))
+ax.set_title("标题", fontsize=11)
+
+# 情形 B：大画布，同样字号 11
+fig, ax = plt.subplots(figsize=(12, 8))
+ax.set_title("标题", fontsize=11)
+```
+
+情形 B 中的 figsize 是情形 A 的 3 倍，但字号没有跟着放大。当两张图都缩放到同样的显示宽度时，情形 B 里的字看起来会**小得多**。
+
+> **核心结论：figsize 变了，字号必须同比调整，否则视觉上文字比例就会失调。**
+
+------------------------------------------------------------------------
+
+## 二、中文乱码：一次性根治
+
+### 问题原因
+
+Matplotlib 默认使用西文字体，无法渲染汉字，显示为方块或问号。
+
+### 解决方案
+
+在代码头部加入以下两行，适用于 **Windows + SimHei（黑体）**：
+
+``` python
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['font.family'] = 'SimHei'       # 指定中文字体
+mpl.rcParams['axes.unicode_minus'] = False    # 修复负号显示为方块的问题
+```
+
+**不同平台的推荐字体：**
+
+| 平台    | 推荐字体        | 参数值                           |
+|---------|-----------------|----------------------------------|
+| Windows | 微软雅黑 / 黑体 | `'Microsoft YaHei'` / `'SimHei'` |
+| macOS   | 苹方 / 华文黑体 | `'PingFang SC'` / `'STHeiti'`    |
+| Linux   | 思源黑体        | `'Noto Sans CJK SC'`             |
+
+**跨平台通用写法（自动检测）：**
+
+``` python
+import platform
+import matplotlib as mpl
+
+system = platform.system()
+if system == 'Windows':
+    mpl.rcParams['font.family'] = 'SimHei'
+elif system == 'Darwin':
+    mpl.rcParams['font.family'] = 'PingFang SC'
+else:
+    mpl.rcParams['font.family'] = 'Noto Sans CJK SC'
+
+mpl.rcParams['axes.unicode_minus'] = False
+```
+
+------------------------------------------------------------------------
+
+## 三、图片与文档间距：上下空白的控制
+
+图片上下方出现大片空白，通常有两个来源：
+
+### 3.1 Matplotlib 内部边距
+
+`plt.tight_layout()` 或 `fig.tight_layout()` 可自动收紧图片内部边距，减少内部空白：
+
+``` python
+fig, ax = plt.subplots(figsize=(7, 4))
+# ... 绘图代码 ...
+plt.tight_layout()
+plt.savefig('fig.png', dpi=150, bbox_inches='tight')
+```
+
+`bbox_inches='tight'` 是关键参数：它会在保存时自动裁掉图片外围多余的空白，特别是 legend 超出画布边界时效果明显。
+
+### 3.2 Quarto / Markdown 文档中的间距
+
+在 `.qmd` 或 `.ipynb` 文档中，图片前后的空白行数会影响渲染后的间距。建议：
+
+-   图片代码块前后各保留一个空行
+-   不要在代码块末尾留多余的 `print()` 或空输出
+
+------------------------------------------------------------------------
+
+## 四、全书统一配置：写在每个 Notebook 头部
+
+这是本章最重要的部分。以下是一套完整的"开头配置单元格"，将其复制到每个 `.ipynb` 文件的第一个代码单元格，可保证全书图片风格一致。
+
+``` python
+# ============================================================
+# 全书绘图统一配置
+# 适用于：Quarto OnlineBook + GitHub Pages 发布 + 未来 PDF 导出
+# 环境：Windows + SimHei + Matplotlib/Seaborn
+# ============================================================
+
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+import seaborn as sns
+
+# ── 1. 中文字体与负号修复 ─────────────────────────────────────
+mpl.rcParams['font.family']       = 'SimHei'
+mpl.rcParams['axes.unicode_minus'] = False
+
+# ── 2. 图片尺寸标准（单位：英寸）────────────────────────────────
+# 单图：宽度与 Quarto 正文列宽对齐（约 7 英寸）
+# 多子图：宽度保持不变，高度按子图数量适当增加
+SINGLE_FIG_SIZE  = (7, 4.5)   # 单图默认尺寸
+WIDE_FIG_SIZE    = (7, 3.5)   # 宽幅横向图（如时序图）
+SQUARE_FIG_SIZE  = (5, 5)     # 正方形图（如相关系数热力图）
+
+# ── 3. 分辨率 ────────────────────────────────────────────────
+DPI_SCREEN = 150   # 网页/Notebook 预览用
+DPI_PRINT  = 300   # PDF 导出用（需要时替换）
+
+# ── 4. 字号标准（与正文协调）─────────────────────────────────
+# Quarto 默认正文约 15–16px ≈ 11–12pt
+# 图内文字建议比正文略小，避免图字压过正文
+BASE_FONT  = 11    # 图内通用字号（坐标轴、图例）
+TITLE_FONT = 12    # 图标题字号
+LABEL_FONT = 10    # 坐标轴标签字号
+TICK_FONT  = 9     # 刻度标签字号
+ANNOT_FONT = 9     # 图内标注文字字号
+
+# ── 5. 写入 rcParams（全局生效）──────────────────────────────
+mpl.rcParams.update({
+    'figure.figsize'    : SINGLE_FIG_SIZE,
+    'figure.dpi'        : DPI_SCREEN,
+    'font.size'         : BASE_FONT,
+    'axes.titlesize'    : TITLE_FONT,
+    'axes.labelsize'    : LABEL_FONT,
+    'xtick.labelsize'   : TICK_FONT,
+    'ytick.labelsize'   : TICK_FONT,
+    'legend.fontsize'   : BASE_FONT,
+    'legend.title_fontsize' : BASE_FONT,
+    'figure.titlesize'  : TITLE_FONT,
+    'savefig.dpi'       : DPI_SCREEN,
+    'savefig.bbox'      : 'tight',
+    'figure.constrained_layout.use' : True,   # 替代 tight_layout，更稳定
+})
+
+# ── 6. Seaborn 主题（可选）───────────────────────────────────
+sns.set_theme(
+    style   = 'whitegrid',
+    palette = 'muted',
+    rc      = {
+        'font.family'        : 'SimHei',
+        'axes.unicode_minus' : False,
+        'font.size'          : BASE_FONT,
+        'axes.titlesize'     : TITLE_FONT,
+        'axes.labelsize'     : LABEL_FONT,
+    }
+)
+
+print("✅ 绘图配置加载完毕")
+print(f"   字体: {mpl.rcParams['font.family']}")
+print(f"   默认图片尺寸: {mpl.rcParams['figure.figsize']}")
+print(f"   分辨率: {mpl.rcParams['figure.dpi']} dpi")
+```
+
+### 为什么用 `constrained_layout` 而非 `tight_layout`？
+
+`tight_layout()` 需要在每次绘图结束时手动调用，容易遗漏，且与某些子图配置冲突。`constrained_layout=True` 写入 `rcParams` 后自动生效，不需要额外调用，更适合全书统一管理。
+
+------------------------------------------------------------------------
+
+## 五、单图与多子图的尺寸规范
+
+### 5.1 单图标准
+
+``` python
+fig, ax = plt.subplots(figsize=SINGLE_FIG_SIZE)  # 使用全局变量
+```
+
+由于已在 `rcParams` 中设置了默认 `figure.figsize`，简写也可以：
+
+``` python
+fig, ax = plt.subplots()  # 自动使用 (7, 4.5)
+```
+
+### 5.2 多子图（一行 N 列）
+
+子图并排时，**宽度保持与单图一致（7 英寸），高度适当降低**：
+
+``` python
+# 一行 2 列子图
+fig, axes = plt.subplots(1, 2, figsize=(7, 3.5))
+
+# 一行 3 列子图
+fig, axes = plt.subplots(1, 3, figsize=(7, 3.0))
+```
+
+> **原则：宽度固定为 7 英寸，高度随子图列数减小。**\
+> 这样在渲染后每个子图内的文字大小与单图保持视觉一致。
+
+### 5.3 为什么不建议用更大的 figsize？
+
+许多人习惯设置 `figsize=(12, 8)` 或更大，认为图片越大越清晰。但在 Quarto + GitHub Pages 场景下：
+
+-   Quarto 会将图片缩放到正文列宽（约 700px）
+-   figsize 越大，缩放比例越大，文字反而越小
+-   使用 7 英寸宽度，与 Quarto 渲染宽度基本吻合，缩放比例最小，文字最清晰
+
+------------------------------------------------------------------------
+
+## 六、保存图片的标准写法
+
+``` python
+import os
+os.makedirs('./figs', exist_ok=True)  # 自动创建 figs 子文件夹
+
+# 保存单张图片
+fig.savefig('./figs/fig_01.png', dpi=150, bbox_inches='tight')
+
+# 如果未来需要 PDF 导出，替换为：
+# fig.savefig('./figs/fig_01.png', dpi=300, bbox_inches='tight')
+```
+
+**为什么不直接用 `plt.savefig` 而用 `fig.savefig`？**\
+当文档中同时存在多张图时，`plt.savefig` 可能保存错误的"当前图"。`fig.savefig` 明确指定对象，更安全。
+
+------------------------------------------------------------------------
+
+## 七、Plotly 的特殊处理
+
+Plotly 生成交互图，在 Quarto HTML 中可以正常嵌入；但在 PDF 导出时需要额外处理。
+
+``` python
+import plotly.graph_objects as go
+import plotly.io as pio
+
+# 设置中文字体（Plotly 不受 rcParams 控制，需单独设置）
+fig = go.Figure()
+fig.update_layout(
+    font=dict(family='SimHei', size=11),
+    width=700,      # 与 Quarto 正文宽度对齐（像素）
+    height=450,
+)
+
+# HTML 输出：直接渲染为交互图（无需额外设置）
+# PDF 输出：需安装 kaleido
+# pip install kaleido
+# fig.write_image('./figs/fig_plotly.png', scale=2)  # scale=2 相当于 2x dpi
+```
+
+> **提示：** 如果文档需要同时发布为 HTML 和 PDF，建议对同一数据先用 Matplotlib 画静态版本用于 PDF，Plotly 版本用于 HTML。两套代码共享数据，只换绘图部分。
+
+------------------------------------------------------------------------
+
+## 八、Quarto 项目级配置：`_quarto.yml`
+
+对于多章节书稿项目，除了在每个 `.ipynb` 头部写配置代码，还可以在 `_quarto.yml` 中添加全局图片参数：
+
+``` yaml
+# _quarto.yml
+format:
+  html:
+    fig-width: 7        # 单位：英寸，与 Matplotlib figsize 保持一致
+    fig-height: 4.5
+    fig-dpi: 150
+  pdf:
+    fig-width: 6.5      # A4 正文宽度约 6.5 英寸（含页边距）
+    fig-height: 4
+    fig-dpi: 300
+```
+
+**优先级说明：**\
+代码中显式设置的 `figsize` \> `_quarto.yml` 中的 `fig-width/height` \> `rcParams` 默认值。
+
+建议策略：`_quarto.yml` 设置兜底默认值，代码中只在特殊图表（如宽幅热力图、正方形散点图）时覆盖。
+
+------------------------------------------------------------------------
+
+## 九、提示词清单
+
+> 本节提供一组可直接复制给 AI 工具的提示词模板，帮助你准确描述绘图排版问题，获得更精准的代码修改建议。
+
+::: callout-tip
+## 💡 提示词 1：设定全书绘图风格
+
+```         
+请帮我生成一段 Python 配置代码，要求如下：
+- 环境：Windows，中文字体使用 SimHei
+- 绘图库：Matplotlib + Seaborn
+- 图片宽度：7 英寸（与 Quarto 正文列宽对齐）
+- 图内字号：坐标轴文字 10pt，图例 11pt，图标题 12pt
+- 分辨率：屏幕预览 150dpi，保存时 150dpi
+- 启用 constrained_layout，不使用 tight_layout
+- 使用 rcParams 写入全局设置，放在 Notebook 第一个代码单元格
+```
+:::
+
+::: callout-tip
+## 💡 提示词 2：修复中文乱码
+
+```         
+我的 Matplotlib 图表中中文显示为方块或乱码，请帮我修复。
+我的系统是 Windows，希望使用 SimHei 字体，同时修复负号显示异常的问题。
+请只给出需要添加到代码最前面的几行配置代码，不要修改绘图逻辑。
+```
+:::
+
+::: callout-tip
+## 💡 提示词 3：调整图片尺寸与字号比例
+
+```         
+我的图表中文字显示偏小（或偏大），请帮我调整。
+当前设置：figsize=(10, 6)，fontsize=11
+目标：图片宽度改为 7 英寸，字号在视觉上保持与之前一致。
+请给出调整后的 figsize 和对应的各类字号参数（title、label、tick、legend），
+并说明调整依据。
+```
+:::
+
+::: callout-tip
+## 💡 提示词 4：消除图片上下多余空白
+
+```         
+我的图表保存后上下有大片空白区域，请帮我修复。
+当前保存代码是：plt.savefig('fig.png')
+请修改保存方式，去除多余空白，同时确保图例不被裁剪。
+另外，如果代码中用了 plt.tight_layout()，请改为 constrained_layout 方式。
+```
+:::
+
+::: callout-tip
+## 💡 提示词 5：多子图统一字号
+
+```         
+我有一张包含 3 个子图（1 行 3 列）的图表，figsize=(7, 3)。
+请帮我设置子图的字号，要求：
+- 每个子图的坐标轴标签：10pt
+- 每个子图的刻度数字：9pt
+- 整体图标题（suptitle）：12pt
+- 子图各自的小标题（title）：11pt
+- 图例字号：10pt
+请使用显式 set_xxx 方法设置，而非依赖 rcParams，以便单图可以覆盖全局设置。
+```
+:::
+
+------------------------------------------------------------------------
+
+## 十、常见问题速查表
+
+| 问题现象 | 根本原因 | 解决方案 |
+|------------------------|------------------------|------------------------|
+| 中文显示方块/乱码 | 默认字体不含中文字形 | `rcParams['font.family'] = 'SimHei'` |
+| 负号显示为方块 | 字体编码问题 | `rcParams['axes.unicode_minus'] = False` |
+| 图内文字时大时小 | figsize 变化但字号未同比调整 | 固定 figsize=7 英寸宽，统一字号 |
+| 图片上下有大片空白 | 默认边距过大 | `bbox_inches='tight'` 保存 |
+| 图例被裁剪 | 图例超出画布范围 | `bbox_inches='tight'` + `legend(loc='best')` |
+| 各章节图片忽大忽小 | 各文件 figsize 不统一 | 使用头部配置单元格统一设置 |
+| 手机上图片需左右滑动 | figsize 过大超出屏幕宽度 | 宽度不超过 7 英寸 |
+| PDF 导出图片模糊 | dpi 设置过低 | `savefig(dpi=300)` 或 `savefig.dpi=300` |
+| Seaborn 覆盖字体设置 | `sns.set_theme()` 重置 rcParams | 在 `set_theme()` 之后重新设置字体 |
+| 多子图间距异常 | `tight_layout` 与 `constrained_layout` 冲突 | 只用 `constrained_layout`，不调用 `tight_layout()` |
+
+------------------------------------------------------------------------
+
+*本章配套代码文件见 `ch_visualization_settings_codes.ipynb`，可直接运行，生成本章全部演示图片。*
