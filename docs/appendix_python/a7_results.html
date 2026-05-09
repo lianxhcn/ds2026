@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Python 可视化：简介 – 数据分析与经济决策</title>
+<title>A7. 结果呈现与表格美化 – 数据分析与经济决策</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,27 +57,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../Lecture/data_visual/graph_dis_box_violin.html" rel="next">
-<link href="../../Lecture/data_clean/lecture_data_clean.html" rel="prev">
-<link href="../../images/book-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-57a92833092fd6dc0d7710b6bdfff9c5.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7ef202e96c563d31d9e5226e4d6cabf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-490ba4e843cb1303a232ed0c676384f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendix_python/a8_workflow.html" rel="next">
+<link href="../appendix_python/a6_modeling.html" rel="prev">
+<link href="../images/book-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-57a92833092fd6dc0d7710b6bdfff9c5.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7ef202e96c563d31d9e5226e4d6cabf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-490ba4e843cb1303a232ed0c676384f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/data_visual/graph_01_intro.html"><strong>可视化</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/data_visual/graph_01_intro.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix_python/index.html"><strong>附录：Python 提示词</strong></a></li><li class="breadcrumb-item"><a href="../appendix_python/a7_results.html">A7. 结果呈现与表格美化</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,10 +134,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="https://lianxhcn.github.io/ds2026/" class="sidebar-logo-link">
-      <img src="../../images/book-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../images/book-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">25PB</a> 
+      <a href="../">25PB</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/lianxhcn/ds2026" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://www.lianxh.cn" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
@@ -154,25 +154,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">封面</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📚课程资料</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📌课件使用指南</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01_homework.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01_homework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🚀作业</span></a>
   </div>
 </li>
@@ -187,37 +187,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_00_coding_with_AI.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_00_coding_with_AI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_01_install_anaconda.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_01_install_anaconda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Python：安装和环境配置</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_02_jupyter_notebook.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_02_jupyter_notebook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Jupyter Notebook 的使用</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_03_install_FAQs.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_03_install_FAQs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Python 安装常见问题</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_04_markdown.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_04_markdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_06_conda_env.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_06_conda_env.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">虚拟环境管理</span></span></a>
   </div>
 </li>
@@ -234,49 +234,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01-DS-intro/ds_intro_01_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01-DS-intro/ds_intro_02_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01-DS-intro/ds_intro_02_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/lecture_get_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/lecture_get_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">金融数据获取</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/data_02_get_data_GMD.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/data_02_get_data_GMD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">获取数据：GMD</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/data_03_TS_SZ_index.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/data_03_TS_SZ_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">上证指数的时序特征</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_store_structure/lecture_data_management_organization.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_store_structure/lecture_data_management_organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">数据管理与组织</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_manage/lecture_data_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_manage/lecture_data_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">数据管理：格式、存储与工作流</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_clean/lecture_data_clean.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_clean/lecture_data_clean.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">数据清洗</span></span></a>
   </div>
 </li>
@@ -293,43 +293,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_01_intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Lecture/data_visual/graph_01_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_box_violin.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_box_violin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">箱型图和小提琴图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">直方图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_kdensity.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_kdensity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">核密度函数图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_distribution_codes.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_distribution_codes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化 — 配套代码</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">数据可视化：一些基本原则</span></span></a>
   </div>
 </li>
@@ -346,19 +346,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_01_introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_01_introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">网络爬虫简介</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_02_sec01_lingnan_prompt.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_02_sec01_lingnan_prompt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">实例-提示词模式：爬取岭南学院教师名录</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_02_sec02_lingnan_dialog.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_02_sec02_lingnan_dialog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">实例-对话模式：爬取岭南学院教师名录</span></span></a>
   </div>
 </li>
@@ -375,25 +375,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_01_ailn.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_01_ailn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">金融文本分析（上）——从文本到结构化数据</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_02_ailn.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_02_ailn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">金融文本分析（下）——情感分析与文本建模</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_analysis_01_claude.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_analysis_01_claude.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">文本数据处理基础</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">文本分析：情感分析与主题建模</span></span></a>
   </div>
 </li>
@@ -410,55 +410,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">概览</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a1_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a1_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A1. 环境配置</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a2_project.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a2_project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A2. 项目规划与版本控制</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a3_concepts.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a3_concepts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A3. 提示词核心词汇</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a4_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a4_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A4. 数据获取与清洗</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a5_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a5_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A5. 数据可视化</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a6_modeling.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a6_modeling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A6. 统计建模</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a7_results.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a7_results.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">A7. 结果呈现与表格美化</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a8_workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a8_workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A8. 上下文管理与调试</span></a>
   </div>
 </li>
@@ -474,35 +474,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#可视化的目的" id="toc-可视化的目的" class="nav-link active" data-scroll-target="#可视化的目的"><span class="header-section-number">15.1</span> 可视化的目的</a></li>
-  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料"><span class="header-section-number">15.2</span> 参考资料</a></li>
-  <li><a href="#理念和原则" id="toc-理念和原则" class="nav-link" data-scroll-target="#理念和原则"><span class="header-section-number">15.3</span> 理念和原则</a></li>
-  <li><a href="#主要图形类型" id="toc-主要图形类型" class="nav-link" data-scroll-target="#主要图形类型"><span class="header-section-number">15.4</span> 主要图形类型</a></li>
-  <li><a href="#同一组数据可以用不同的图形展示" id="toc-同一组数据可以用不同的图形展示" class="nav-link" data-scroll-target="#同一组数据可以用不同的图形展示"><span class="header-section-number">15.5</span> 同一组数据可以用不同的图形展示</a></li>
-  <li><a href="#学习资源" id="toc-学习资源" class="nav-link" data-scroll-target="#学习资源"><span class="header-section-number">15.6</span> 学习资源</a>
+  <li><a href="#a7.1-在-notebook-中美化输出" id="toc-a7.1-在-notebook-中美化输出" class="nav-link active" data-scroll-target="#a7.1-在-notebook-中美化输出">A7.1 在 Notebook 中美化输出</a>
   <ul class="collapse">
-  <li><a href="#在线实例" id="toc-在线实例" class="nav-link" data-scroll-target="#在线实例"><span class="header-section-number">15.6.1</span> 在线实例</a></li>
-  <li><a href="#官方可视化专栏" id="toc-官方可视化专栏" class="nav-link" data-scroll-target="#官方可视化专栏"><span class="header-section-number">15.6.2</span> 官方可视化专栏</a></li>
+  <li><a href="#a7.1.1-为什么默认输出不够用" id="toc-a7.1.1-为什么默认输出不够用" class="nav-link" data-scroll-target="#a7.1.1-为什么默认输出不够用">A7.1.1 为什么默认输出不够用？</a></li>
   </ul></li>
-  <li><a href="#python-绘图命令的基本语法和逻辑" id="toc-python-绘图命令的基本语法和逻辑" class="nav-link" data-scroll-target="#python-绘图命令的基本语法和逻辑"><span class="header-section-number">15.7</span> Python 绘图命令的基本语法和逻辑</a></li>
-  <li><a href="#常用的可视化库" id="toc-常用的可视化库" class="nav-link" data-scroll-target="#常用的可视化库"><span class="header-section-number">15.8</span> 常用的可视化库</a></li>
-  <li><a href="#手绘风格的图形" id="toc-手绘风格的图形" class="nav-link" data-scroll-target="#手绘风格的图形"><span class="header-section-number">15.9</span> 手绘风格的图形</a></li>
-  <li><a href="#按在地上摩擦" id="toc-按在地上摩擦" class="nav-link" data-scroll-target="#按在地上摩擦"><span class="header-section-number">15.10</span> 按在地上摩擦</a></li>
-  <li><a href="#动图-交互图" id="toc-动图-交互图" class="nav-link" data-scroll-target="#动图-交互图"><span class="header-section-number">15.11</span> 动图-交互图</a></li>
-  <li><a href="#文字标注" id="toc-文字标注" class="nav-link" data-scroll-target="#文字标注"><span class="header-section-number">15.12</span> 文字标注</a>
-  <ul class="collapse">
-  <li><a href="#实例" id="toc-实例" class="nav-link" data-scroll-target="#实例"><span class="header-section-number">15.12.1</span> 实例</a></li>
-  </ul></li>
-  <li><a href="#参考资料-1" id="toc-参考资料-1" class="nav-link" data-scroll-target="#参考资料-1"><span class="header-section-number">15.13</span> 参考资料</a></li>
+  <li><a href="#a7.2-导出为-excel-报告" id="toc-a7.2-导出为-excel-报告" class="nav-link" data-scroll-target="#a7.2-导出为-excel-报告">A7.2 导出为 Excel 报告</a></li>
+  <li><a href="#a7.3-导出为-latex-格式" id="toc-a7.3-导出为-latex-格式" class="nav-link" data-scroll-target="#a7.3-导出为-latex-格式">A7.3 导出为 LaTeX 格式</a></li>
+  <li><a href="#a7.4-在-notebook-中呈现分析摘要" id="toc-a7.4-在-notebook-中呈现分析摘要" class="nav-link" data-scroll-target="#a7.4-在-notebook-中呈现分析摘要">A7.4 在 Notebook 中呈现分析摘要</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/data_visual/graph_01_intro.html"><strong>可视化</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/data_visual/graph_01_intro.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix_python/index.html"><strong>附录：Python 提示词</strong></a></li><li class="breadcrumb-item"><a href="../appendix_python/a7_results.html">A7. 结果呈现与表格美化</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></h1>
+<h1 class="title">A7. 结果呈现与表格美化</h1>
 </div>
 
 
@@ -519,312 +506,235 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>本章简要介绍 Python 可视化的基本概念和一些常用的可视化库。</p>
-<section id="可视化的目的" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="可视化的目的"><span class="header-section-number">15.1</span> 可视化的目的</h2>
+<p>代码跑通只是第一步——如何让结果好看、易读、可汇报，是分析工作中同样重要的一环。本章针对 Notebook 输出和最终报告两个场景，提供结果呈现的提示词框。</p>
+<p><strong>本章解决的核心问题：</strong></p>
 <ul>
-<li>数据分布：了解数据的分布情况，识别异常值和趋势。</li>
-<li>数据关系：探索变量之间的关系，识别相关性和因果关系。</li>
-<li>数据模式：识别数据中的模式和规律，帮助进行预测和决策。</li>
-<li>数据传达：通过图形化的方式传达数据的含义和故事，帮助观众理解数据。</li>
+<li>Notebook 里打印出来的统计量是一堆数字，怎么让它变成格式整洁的表格？</li>
+<li>回归结果默认输出的 summary 太长，怎么提取关键信息？</li>
+<li>如何将结果导出为 Excel 或 LaTeX 格式，直接放进报告和论文？</li>
 </ul>
-</section>
-<section id="参考资料" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="参考资料"><span class="header-section-number">15.2</span> 参考资料</h2>
-<ul>
-<li>Luis Moneda, Data VisualizationPractices and examples. <a href="https://lgmoneda.github.io/resources/presentations/Data%20Visualization.pdf">Slides</a>.
-<ul>
-<li>作者提供了一些 Good Examples 和 Bad Examples 的对比，帮助我们理解什么样的图形设计是有效的，什么样的设计会误导读者。</li>
-</ul></li>
-<li><a href="https://datavizproject.com/">Data Viz Project</a>
-<ul>
-<li>提供各种数据可视化类型的示例和最佳实践，帮助选择合适的图形类型。</li>
-</ul></li>
-<li><a href="https://python-graph-gallery.com/best-python-chart-examples/">Best Python Chart Examples</a>
-<ul>
-<li>各类漂亮的 Python 图形示例，涵盖了各种图形类型和应用场景，可以作为我们设计图形时的灵感来源。</li>
-</ul></li>
-<li><a href="https://informationisbeautiful.net/">Information is Beautiful</a>
-<ul>
-<li>提供大量信息可视化的案例和工具，帮助理解如何将复杂数据转化为易于理解的图形。</li>
-</ul></li>
-<li>张蛟蛟, 2025, <a href="https://www.lianxh.cn/details/1572.html">从“能看”到“好懂”：科研图表设计的原则和建议</a>.</li>
-<li>肖蕊, 2022,&nbsp;<a href="https://www.lianxh.cn/details/977.html">Stata可视化：能用图形就不用表格</a>.</li>
-</ul>
-</section>
-<section id="理念和原则" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="理念和原则"><span class="header-section-number">15.3</span> 理念和原则</h2>
-<ul>
-<li>颜国强, 2024, <a href="https://www.lianxh.cn/details/1503.html">相同的数据、不同的视角：可视化如何影响数据解读</a>.</li>
-<li>张蛟蛟, 2025, <a href="https://www.lianxh.cn/details/1572.html">从“能看”到“好懂”：科研图表设计的原则和建议</a></li>
-</ul>
-</section>
-<section id="主要图形类型" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="主要图形类型"><span class="header-section-number">15.4</span> 主要图形类型</h2>
-<ul>
-<li><p><a href="https://www.data-to-viz.com/#explore">data-to-viz.com - 最全面的图形分类</a></p></li>
-<li><p><a href="https://matplotlib.org/stable/plot_types/index.html">matplotlib - 图形种类概览</a></p></li>
-<li><p><a href="https://seaborn.pydata.org/tutorial/axis_grids.html">seaborn - 图形种类概览</a></p></li>
-<li><p>单变量图：展示单个变量的分布情况，如直方图、箱线图等。</p></li>
-<li><p>双变量图：展示两个变量之间的关系，如散点图、热力图等。</p></li>
-<li><p>多变量图：展示多个变量之间的关系，如气泡图、平行坐标图等。</p></li>
-<li><p>时间序列图：展示随时间变化的数据，如折线图、面积图等。</p></li>
-<li><p>地理图：展示地理数据，如地图、热力图等。</p></li>
-<li><p>网络图：展示网络数据，如社交网络图、关系图等。</p></li>
-</ul>
-</section>
-<section id="同一组数据可以用不同的图形展示" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="同一组数据可以用不同的图形展示"><span class="header-section-number">15.5</span> 同一组数据可以用不同的图形展示</h2>
-<ul>
-<li><a href="https://www.data-to-viz.com/story">Story - 各种实例</a></li>
-<li><a href="https://www.data-to-viz.com/story/SevCatOneNumNestedOneObsPerGroup.html">Visualizing the world population</a></li>
-<li><a href="https://www.data-to-viz.com/story/ThreeNum.html">Life expectancy, gdp per capita and population size</a>
-<ul>
-<li>可以用 GMD 数据替换这个例子中的数据</li>
-</ul></li>
-</ul>
-</section>
-<section id="学习资源" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="学习资源"><span class="header-section-number">15.6</span> 学习资源</h2>
-<p>五大扩展包：https://zhuanlan.zhihu.com/p/148748125</p>
-<p>帮我补充</p>
-<ul>
-<li>在线教程
-<ul>
-<li><a href="https://matplotlib.org/stable/contents.html">Matplotlib 官方文档</a></li>
-</ul></li>
-<li>实例
-<ul>
-<li><a href="https://www.kaggle.com/code/thebrownviking20/intermediate-visualization-tutorial-using-plotly">Intermediate visualization tutorial using <strong>Plotly</strong></a></li>
-<li><a href="https://python-graph-gallery.com/">The Python Graph Gallery</a></li>
-<li><a href="https://matplotlib.org/stable/gallery/index.html">Matplotlib Gallery</a></li>
-<li><a href="https://seaborn.pydata.org/examples/index.html">Seaborn 示例</a></li>
-<li><a href="https://plotly.com/python/">Plotly 示例</a></li>
-<li><a href="https://docs.bokeh.org/en/latest/docs/gallery.html">Bokeh 示例</a></li>
-<li><a href="https://altair-viz.github.io/gallery/index.html">Altair 示例</a></li>
-</ul></li>
-<li>各类图形展示
-<ul>
-<li><a href="https://python-graph-gallery.com/histogram/">直方图</a></li>
-<li><a href="">散点图</a></li>
-<li>函数图</li>
-<li><a href="">地图</a></li>
-<li><a href="https://github.com/holtzy/The-Python-Graph-Gallery/tree/master/src/notebooks">绘图 notebooks</a></li>
-</ul></li>
-</ul>
-<section id="在线实例" class="level3" data-number="15.6.1">
-<h3 data-number="15.6.1" class="anchored" data-anchor-id="在线实例"><span class="header-section-number">15.6.1</span> 在线实例</h3>
-<ul>
-<li><p><a href="https://www.data-to-viz.com/">data-to-viz.com</a>：提供了多种图表类型的在线实例和解释，适合初学者。</p></li>
-<li><p><a href="https://www.heywhale.com/mw/project/5eb7958f366f4d002d783d4a">【pyecharts教程】应该是全网最全的教程了</a>。展示了各种使用 <code>pyecharts</code> 绘制的图表实例，适合初学者和进阶用户。</p></li>
-</ul>
-</section>
-<section id="官方可视化专栏" class="level3" data-number="15.6.2">
-<h3 data-number="15.6.2" class="anchored" data-anchor-id="官方可视化专栏"><span class="header-section-number">15.6.2</span> 官方可视化专栏</h3>
-<ul>
-<li>美国农业部网站 <a href="https://www.ers.usda.gov/data-products/charts-of-note">USDA - Economic Research Service</a>, Charts of Note 专栏提供了很多专业的统计图形展示，附带数据和解释。</li>
-</ul>
-</section>
-</section>
-<section id="python-绘图命令的基本语法和逻辑" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="python-绘图命令的基本语法和逻辑"><span class="header-section-number">15.7</span> Python 绘图命令的基本语法和逻辑</h2>
-<ul>
-<li><code>file:///D:/Rbook/DSFinance/books/VanderPlas_2023_PDSH_Python_Data_Science_Handbook-2E.pdf#page=281.11</code>，Chap29-35 介绍了很多绘图的语法知识。</li>
-</ul>
-</section>
-<section id="常用的可视化库" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="常用的可视化库"><span class="header-section-number">15.8</span> 常用的可视化库</h2>
-<ul>
-<li>Matplotlib：最常用的 Python 可视化库，功能强大，支持多种图表类型。</li>
-<li>Seaborn：基于 Matplotlib 的高级可视化库，提供更美观的默认样式和更简便的接口。</li>
-<li>Plotly：交互式可视化库，支持多种图表类型，适合 Web 应用。</li>
-<li>Bokeh：另一种交互式可视化库，适合大数据集和实时数据流。</li>
-<li>Altair：基于 Vega-Lite 的声明式可视化库，适合快速创建复杂的图表。</li>
-<li>ggplot：基于 Grammar of Graphics 的可视化库，适合统计图表的创建。</li>
-<li>Pygal：适合创建 SVG 图表的库，支持多种图表类型。</li>
-<li>Folium：用于创建交互式地图的库，适合地理数据可视化。</li>
-<li>Geopandas：用于处理地理数据的库，支持空间数据的可视化。</li>
-<li>NetworkX：用于创建和可视化网络图的库，适合社交网络分析。</li>
-</ul>
-<div id="2b127571" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Ellipse</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixing random state for reproducibility</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>NUM <span class="op">=</span> <span class="dv">250</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ells <span class="op">=</span> [Ellipse(xy<span class="op">=</span>np.random.rand(<span class="dv">2</span>) <span class="op">*</span> <span class="dv">10</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                width<span class="op">=</span>np.random.rand(), height<span class="op">=</span>np.random.rand(),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                angle<span class="op">=</span>np.random.rand() <span class="op">*</span> <span class="dv">360</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(NUM)]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>), ylim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>), aspect<span class="op">=</span><span class="st">"equal"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> ells:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    ax.add_artist(e)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    e.set_clip_box(ax.bbox)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    e.set_alpha(np.random.rand())</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    e.set_facecolor(np.random.rand(<span class="dv">3</span>))</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="graph_01_intro_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<section id="a7.1-在-notebook-中美化输出" class="level2">
+<h2 class="anchored" data-anchor-id="a7.1-在-notebook-中美化输出">A7.1 在 Notebook 中美化输出</h2>
+<section id="a7.1.1-为什么默认输出不够用" class="level3">
+<h3 class="anchored" data-anchor-id="a7.1.1-为什么默认输出不够用">A7.1.1 为什么默认输出不够用？</h3>
+<p>pandas 默认的 <code>print(df)</code> 输出在 Notebook 中又小又难读，数字没有千分位符，小数位数不统一，列名是英文缩写。向老师或同学展示分析结果时，这些细节很影响专业感。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示词：美化数据框在 Notebook 中的显示效果
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>我在 Jupyter Notebook 中有一个 pandas 数据框 <span class="in">`df_result`</span>，</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>包含以下列：</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>stock_code：股票代码（字符串）</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>annual_return：年化收益率（浮点数，如 0.1523）</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>volatility：年化波动率（浮点数，如 0.2341）</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>sharpe：夏普比率（浮点数，如 1.23）</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>max_drawdown：最大回撤（浮点数，如 -0.1823）</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>total_volume：总成交量（整数，如 12345678901）</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>请帮我写代码，让这个数据框在 Notebook 中显示得更专业：</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>将列名改为中文：</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>   [stock_code→股票代码, annual_return→年化收益率, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    volatility→年化波动率, sharpe→夏普比率, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    max_drawdown→最大回撤, total_volume→总成交量（万手）]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>格式化数值：</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>annual_return、volatility、max_drawdown 列：显示为百分比，</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>     保留 2 位小数（如 15.23%）</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>sharpe 列：保留 2 位小数（如 1.23）</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>total_volume 列：换算为万手（除以 10000），加千分位符（如 1,234,567）</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>条件格式：</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>annual_return 列：正值显示绿色背景，负值显示红色背景</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>sharpe 列：大于 1 的值加粗显示</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>在 Notebook 中用 display() 显示，而不是 print()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>请说明：用 .style 方法格式化后，数据框的底层数值是否被修改？</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="手绘风格的图形" class="level2" data-number="15.9">
-<h2 data-number="15.9" class="anchored" data-anchor-id="手绘风格的图形"><span class="header-section-number">15.9</span> 手绘风格的图形</h2>
-<ul>
-<li><a href="https://matplotlib.org/stable/gallery/showcase/xkcd.html#sphx-glr-gallery-showcase-xkcd-py">matplotlib - 手绘风格的图形</a></li>
-</ul>
-</section>
-<section id="按在地上摩擦" class="level2" data-number="15.10">
-<h2 data-number="15.10" class="anchored" data-anchor-id="按在地上摩擦"><span class="header-section-number">15.10</span> 按在地上摩擦</h2>
-<ul>
-<li><a href="https://medium.com/data-science/make-a-beautiful-scatterplot-in-in-a-few-lines-in-python-to-make-your-report-outstanding-f47db0532094">Make a beautiful scatterplot in a few lines in Python to make your report outstanding</a></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/20250512002745.png" class="img-fluid figure-img"></p>
-<figcaption>20250512002745</figcaption>
-</figure>
 </div>
-</section>
-<section id="动图-交互图" class="level2" data-number="15.11">
-<h2 data-number="15.11" class="anchored" data-anchor-id="动图-交互图"><span class="header-section-number">15.11</span> 动图-交互图</h2>
-<ul>
-<li><a href="https://www.analyticsvidhya.com/blog/2021/06/advanced-python-data-visualization-libraries-plotly/">Plotly and cufflinks : Advanced Python Data Visualization Libraries</a></li>
-</ul>
-</section>
-<section id="文字标注" class="level2" data-number="15.12">
-<h2 data-number="15.12" class="anchored" data-anchor-id="文字标注"><span class="header-section-number">15.12</span> 文字标注</h2>
-<ul>
-<li><a href="https://matplotlib.org/stable/gallery/text_labels_and_annotations/index.html">matplotlib - 文字标注</a></li>
-<li><a href="https://seaborn.pydata.org/tutorial/axis_grids.html">seaborn - 文字标注</a></li>
-</ul>
-<section id="实例" class="level3" data-number="15.12.1">
-<h3 data-number="15.12.1" class="anchored" data-anchor-id="实例"><span class="header-section-number">15.12.1</span> 实例</h3>
-<p>举一个小例子，说明如何在图形上标注说明文字，涉及：字号，颜色，位置等特征的设定</p>
-<div id="04d5e2fb" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个简单的折线图</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'Data Line'</span>)</span>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示词：提取并格式化回归结果摘要
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>statsmodels 的 <code>result.summary()</code> 输出很完整，但格式不适合直接展示。这组提示词帮你提取关键信息并重新排版。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>我用 statsmodels 跑了一个 OLS 回归，结果存储在 <span class="in">`result`</span> 对象中。</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>现在需要提取关键信息，整理为一个格式整洁的汇总表格。</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>请帮我写代码：</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 找到最大值点</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>max_x <span class="op">=</span> x[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>max_y <span class="op">=</span> y[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>【提取系数表】从 result.summary2().tables<span class="co">[</span><span class="ot">1</span><span class="co">]</span> 中提取：</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>   变量名、系数（保留 4 位小数）、标准误（保留 4 位小数）、</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>   t 值（保留 2 位小数）、p 值（保留 3 位小数）</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 在最大值点标注说明文字</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.text(max_x, max_y, <span class="ss">f'Max Value</span><span class="ch">\n</span><span class="ss">(</span><span class="sc">{</span>max_x<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>max_y<span class="sc">}</span><span class="ss">)'</span>, </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'green'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'bottom'</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置标题和轴标签</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Line Plot with Annotation'</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X-axis'</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y-axis'</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 显示图例</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 显示图形</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="graph_01_intro_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>【添加显著性标注】根据 p 值添加星号列：</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>   *** p &lt; 0.01，** p &lt; 0.05，* p &lt; 0.1，无星号则留空</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>【添加模型统计量】在表格底部添加：</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>   样本量 N、R²（保留 3 位小数）、调整后 R²（保留 3 位小数）、</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>   F 统计量（保留 2 位小数）、p 值（F 统计量）</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>【格式化输出】</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>在 Notebook 中用 display() 显示</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>变量名改为中文（截距→常数项，beta→市场β，size→公司规模等）</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>整体左对齐，数字右对齐</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+追问模板
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>上面整理好的回归结果表格，现在需要展示多个模型的对比。</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>我共有 3 个回归结果：</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>result1：基准 OLS（不含固定效应）</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>result2：加入年份固定效应</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>result3：加入双向固定效应 + 聚类标准误</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>请帮我写代码，将三个模型的结果整合为一个「并列回归表格」：</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>行为变量名，列为「模型(1)」「模型(2)」「模型(3)」</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>每格显示：系数值（标准误），系数下方括号内为标准误，</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  如：0.0312***（0.0098）</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>表格底部显示：N、R²、是否控制年份固定效应、是否控制企业固定效应</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  （用「是」/「否」表示）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<div id="5c885ce2" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成标准正态分布数据</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">500</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> norm.pdf(x, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘图</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">"Standard Normal"</span>, color<span class="op">=</span><span class="st">"blue"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置坐标轴标题和主标题</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Value"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">"darkred"</span>)     <span class="co"># x 轴标题</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Density"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">"darkgreen"</span>)  <span class="co"># y 轴标题</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Standard Normal Distribution"</span>, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">"navy"</span>, loc<span class="op">=</span><span class="st">"center"</span>)  <span class="co"># 主标题</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加图例</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"upper left"</span>, fontsize<span class="op">=</span><span class="dv">10</span>, frameon<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加注释（note）</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="st">"Peak at mean = 0"</span>, xy<span class="op">=</span>(<span class="dv">0</span>, norm.pdf(<span class="dv">0</span>)),</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>             xytext<span class="op">=</span>(<span class="dv">1</span>, <span class="fl">0.3</span>), fontsize<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>             arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>, color<span class="op">=</span><span class="st">"red"</span>))</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加自定义文字 text</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="op">-</span><span class="fl">3.5</span>, <span class="fl">0.35</span>, <span class="st">"Note: $</span><span class="ch">\\</span><span class="st">mu = 0$, $</span><span class="ch">\\</span><span class="st">sigma = 1$"</span>,</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>         fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"black"</span>, style<span class="op">=</span><span class="st">"italic"</span>)</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 美化</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="graph_01_intro_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+</section>
+</section>
+<section id="a7.2-导出为-excel-报告" class="level2">
+<h2 class="anchored" data-anchor-id="a7.2-导出为-excel-报告">A7.2 导出为 Excel 报告</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示词：将分析结果导出为格式化 Excel 文件
 </div>
 </div>
-</div>
-<div id="29da236b" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="callout-body-container callout-body">
+<p>适用于向老师、同学或未来的工作汇报提交分析结果。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>我完成了一个投资组合分析，有多个结果需要整合为一份 Excel 报告：</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个简单的散点图</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>]</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>数据：</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>df_performance：各策略年化绩效指标（年化收益、夏普比率、最大回撤）</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>df_holdings：投资组合持仓明细（股票代码、权重、市值）</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>df_regression：回归系数表（变量名、系数、t 值、p 值、显著性）</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加说明文字</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="dv">3</span>, <span class="dv">6</span>, <span class="st">'This is a point'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'red'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置标题和轴标签</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot with Annotation'</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X-axis'</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y-axis'</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 显示图形</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="graph_01_intro_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>请帮我用 openpyxl 生成 Excel 文件，要求：</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>工作表结构：</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sheet 1「绩效摘要」：df_performance，列宽自动适配</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sheet 2「持仓明细」：df_holdings，按权重降序排列</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sheet 3「回归结果」：df_regression，含列标题</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>格式要求（每个工作表）：</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第一行（表头）：深蓝色背景（#003366），白色字体，加粗，居中</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>数字格式：</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>收益率、权重列：百分比格式，2 位小数（如 12.35%）</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>系数、t 值列：保留 4 位小数</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>市值列：千分位符，无小数（如 1,234,567）</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>奇偶行交替填色：奇数行白色，偶数行浅灰色（#F2F2F2）</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>所有工作表第一行冻结（方便滚动时始终看到表头）</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>文件：在「绩效摘要」工作表的 A1 单元格上方，</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>插入标题「投资组合分析报告」和当前日期。</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>保存路径：../outputs/tables/portfolio_report.xlsx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
+<section id="a7.3-导出为-latex-格式" class="level2">
+<h2 class="anchored" data-anchor-id="a7.3-导出为-latex-格式">A7.3 导出为 LaTeX 格式</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示词：将回归结果导出为 LaTeX 表格
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>适用于需要将结果放入 LaTeX 论文的场景。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>我有一个 pandas 数据框 <span class="in">`df_reg_table`</span>，</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>包含整理好的回归结果（变量名、系数、标准误、显著性标注）。</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>请帮我将这个数据框导出为 LaTeX 格式的三线表（booktabs 风格），要求：</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>表格格式：</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用 booktabs 宏包的 \toprule、\midrule、\bottomrule</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第一列为变量名（左对齐），其余列为数值（居中对齐）</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>三列：变量、系数（t 值），显著性标注注释在表格底部</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>注释行：*p&lt;0.10, **p&lt;0.05, ***p&lt;0.01</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>输出方式：</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>在 Notebook 中打印 LaTeX 代码（用 print()）</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>同时保存为 .tex 文件：../outputs/tables/regression_table.tex</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>请在代码中说明：</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>如何在 LaTeX 文档中引用这个表格文件（\input{} 命令）</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>为什么用 escape=False 参数，以及什么时候不应该用它</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="参考资料-1" class="level2" data-number="15.13">
-<h2 data-number="15.13" class="anchored" data-anchor-id="参考资料-1"><span class="header-section-number">15.13</span> 参考资料</h2>
-<ul>
-<li>Johansson, R., 2024, Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib. Apress Berkeley, CA. <a href="https://link.springer.com/book/10.1007/979-8-8688-0413-7">Link</a>, <a href="https://link.springer.com/content/pdf/10.1007/979-8-8688-0413-7.pdf">PDF</a> (需要用校园 ID 登录), <a href="https://github.com/Apress/Numerical-Python-3rd-ed/fork">github</a>
-<ul>
-<li>Python 入门，绘图，科学计算，偏微分方程，统计和机器学习初步</li>
-<li>Chapter 4 Plotting and Visualization, 介绍绘图的基本元素.</li>
-</ul></li>
-</ul>
+<section id="a7.4-在-notebook-中呈现分析摘要" class="level2">
+<h2 class="anchored" data-anchor-id="a7.4-在-notebook-中呈现分析摘要">A7.4 在 Notebook 中呈现分析摘要</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示词：生成一份完整的分析摘要单元格
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>这组提示词帮你在 Notebook 的最后生成一个结构清晰的分析摘要，适合直接截图或打印提交。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>我的 Jupyter Notebook 分析了 A 股银行股在政策公告后的超额收益，</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>已经有以下变量：</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`event_n`</span>：事件数量（整数）</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`car_mean`</span>：平均 CAR（浮点数）</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`car_t`</span>：t 统计量（浮点数）</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`car_pvalue`</span>：p 值（浮点数）</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`df_car`</span>：包含每天 CAR 和置信区间的数据框</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>请帮我写一段代码，在 Notebook 中用 IPython.display 的 Markdown 或 HTML</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>渲染一个格式整洁的分析摘要，包含：</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>标题：「事件研究结果摘要」（加粗，字号 16）</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>分析参数：事件数量、事件窗口（-10, +10）、估计窗口（-200, -21）</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>核心结果表格：</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>   | 指标 | 数值 |</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>   事件日（Day 0）CAR | <span class="co">[</span><span class="ot">car_mean 的格式化值，百分比</span><span class="co">]</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>   t 统计量 | <span class="co">[</span><span class="ot">car_t，保留 2 位小数</span><span class="co">]</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>   p 值 | <span class="co">[</span><span class="ot">car_pvalue，保留 3 位小数</span><span class="co">]</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>   统计显著性 | <span class="co">[</span><span class="ot">根据 p 值自动显示：***/**/* 或「不显著」</span><span class="co">]</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>结论：一句话自动生成（根据系数正负和显著性判断）：</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>   如「结果表明，政策公告后银行股出现显著正向超额收益（CAR=X%，p&lt;0.01）」</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 
 
 </section>
@@ -1398,13 +1308,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../Lecture/data_clean/lecture_data_clean.html" class="pagination-link" aria-label="数据清洗">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">数据清洗</span></span>
+      <a href="../appendix_python/a6_modeling.html" class="pagination-link" aria-label="A6. 统计建模">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">A6. 统计建模</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Lecture/data_visual/graph_dis_box_violin.html" class="pagination-link" aria-label="箱型图和小提琴图">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">箱型图和小提琴图</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendix_python/a8_workflow.html" class="pagination-link" aria-label="A8. 上下文管理与调试">
+        <span class="nav-page-text">A8. 上下文管理与调试</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lianxhcn.github.io/ds2026/index.html</loc>
-    <lastmod>2026-03-24T14:27:16.664Z</lastmod>
+    <lastmod>2026-05-09T19:56:06.285Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/00_intro.html</loc>
-    <lastmod>2026-04-15T15:06:02.091Z</lastmod>
+    <lastmod>2026-05-09T19:57:07.189Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/00_setup.html</loc>
@@ -41,8 +41,12 @@
     <lastmod>2026-04-01T16:29:54.230Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/01-DS-intro/what-is-ds.html</loc>
-    <lastmod>2026-05-09T19:46:39.874Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/01-DS-intro/ds_intro_01_intro.html</loc>
+    <lastmod>2026-05-09T20:27:30.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/01-DS-intro/ds_intro_02_setup.html</loc>
+    <lastmod>2026-05-09T20:27:44.261Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/data_get_data/lecture_get_data.html</loc>
@@ -109,23 +113,55 @@
     <lastmod>2026-03-24T16:41:10.781Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/reg_ols/ols_visual_3D.html</loc>
-    <lastmod>2026-04-11T14:04:26.810Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/text_analysis/lecture_text_01_ailn.html</loc>
+    <lastmod>2026-03-30T11:28:11.729Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_tree/ml_tree_lec.html</loc>
-    <lastmod>2026-04-30T00:25:18.434Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/text_analysis/lecture_text_02_ailn.html</loc>
+    <lastmod>2026-03-31T00:34:29.394Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_tree/ml_tree_codes.html</loc>
-    <lastmod>2026-04-30T00:23:46.077Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/text_analysis/lecture_text_analysis_01_claude.html</loc>
+    <lastmod>2026-03-31T09:57:51.359Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_SVM/ml_SVM_lec.html</loc>
-    <lastmod>2026-04-29T19:48:49.222Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/text_analysis/lecture_text_analysis_02_claude.html</loc>
+    <lastmod>2026-03-31T10:00:15.190Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_SVM/ml_SVM_codes.html</loc>
-    <lastmod>2026-04-30T07:37:48.683Z</lastmod>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/index.html</loc>
+    <lastmod>2026-03-26T07:56:05.096Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a1_setup.html</loc>
+    <lastmod>2026-03-25T10:43:28.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a2_project.html</loc>
+    <lastmod>2026-03-25T10:43:28.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a3_concepts.html</loc>
+    <lastmod>2026-03-25T10:43:28.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a4_data.html</loc>
+    <lastmod>2026-03-25T10:43:28.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a5_visualization.html</loc>
+    <lastmod>2026-03-25T10:43:28.467Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a6_modeling.html</loc>
+    <lastmod>2026-03-25T10:43:28.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a7_results.html</loc>
+    <lastmod>2026-03-25T10:43:28.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/appendix_python/a8_workflow.html</loc>
+    <lastmod>2026-04-01T14:26:22.944Z</lastmod>
   </url>
 </urlset>

@@ -54,7 +54,8 @@ book:
 
     - part: "**数据分析**"
       chapters:
-        - Lecture/01-DS-intro/what-is-ds.qmd
+        - Lecture/01-DS-intro/ds_intro_01_intro.md
+        - Lecture/01-DS-intro/ds_intro_02_setup.md
         - Lecture/data_get_data/lecture_get_data.ipynb 
         - Lecture/data_get_data/data_02_get_data_GMD.ipynb
         - Lecture/data_get_data/data_03_TS_SZ_index.ipynb
@@ -78,9 +79,9 @@ book:
         - Lecture/crawing/craw_02_sec01_lingnan_prompt.md
         - Lecture/crawing/craw_02_sec02_lingnan_dialog.ipynb
 
-    - part: "**线性回归分析**"
-      chapters:
-        - Lecture/reg_ols/ols_visual_3D.ipynb
+    # - part: "**线性回归分析**"
+    #   chapters:
+    #     - Lecture/reg_ols/ols_visual_3D.ipynb
 
     # - part: "**面板模型：固定效应**"
     #   chapters: 
@@ -120,32 +121,32 @@ book:
     #     - Lecture/method_MLE/MLE_codes.ipynb
     #     - Lecture/method_MLE/MLE_case.ipynb
   
-    - part: "**机器学习**"
+    # - part: "**机器学习**"
+    #   chapters:
+    #     - Lecture/ml_tree/ml_tree_lec.ipynb
+    #     - Lecture/ml_tree/ml_tree_codes.ipynb
+    #     - Lecture/ml_SVM/ml_SVM_lec.ipynb
+    #     - Lecture/ml_SVM/ml_SVM_codes.ipynb
+
+    - part: "**文本分析**"
       chapters:
-        - Lecture/ml_tree/ml_tree_lec.ipynb
-        - Lecture/ml_tree/ml_tree_codes.ipynb
-        - Lecture/ml_SVM/ml_SVM_lec.ipynb
-        - Lecture/ml_SVM/ml_SVM_codes.ipynb
-
-    # - part: "**文本分析**"
-    #   chapters:
-    #     - Lecture/text_analysis/lecture_text_01_ailn.md
-    #     - Lecture/text_analysis/lecture_text_02_ailn.md
-    #     - Lecture/text_analysis/lecture_text_analysis_01_claude.ipynb
-    #     - Lecture/text_analysis/lecture_text_analysis_02_claude.ipynb
+        - Lecture/text_analysis/lecture_text_01_ailn.md
+        - Lecture/text_analysis/lecture_text_02_ailn.md
+        - Lecture/text_analysis/lecture_text_analysis_01_claude.ipynb
+        - Lecture/text_analysis/lecture_text_analysis_02_claude.ipynb
 
 
-    # - part: "**附录：Python 提示词**"
-    #   chapters:
-    #     - appendix_python/index.qmd
-    #     - appendix_python/a1_setup.qmd
-    #     - appendix_python/a2_project.qmd
-    #     - appendix_python/a3_concepts.qmd
-    #     - appendix_python/a4_data.qmd
-    #     - appendix_python/a5_visualization.qmd
-    #     - appendix_python/a6_modeling.qmd
-    #     - appendix_python/a7_results.qmd
-    #     - appendix_python/a8_workflow.qmd
+    - part: "**附录：Python 提示词**"
+      chapters:
+        - appendix_python/index.qmd
+        - appendix_python/a1_setup.qmd
+        - appendix_python/a2_project.qmd
+        - appendix_python/a3_concepts.qmd
+        - appendix_python/a4_data.qmd
+        - appendix_python/a5_visualization.qmd
+        - appendix_python/a6_modeling.qmd
+        - appendix_python/a7_results.qmd
+        - appendix_python/a8_workflow.qmd
 
 format:
   html:

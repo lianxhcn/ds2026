@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 借助 AI 写代码 – 数据分析与经济决策</title>
+<title>概览 – 数据分析与经济决策</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../Lecture/00-setup/01_01_install_anaconda.html" rel="next">
-<link href="../../Lecture/01_homework.html" rel="prev">
-<link href="../../images/book-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-57a92833092fd6dc0d7710b6bdfff9c5.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7ef202e96c563d31d9e5226e4d6cabf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-490ba4e843cb1303a232ed0c676384f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendix_python/a1_setup.html" rel="next">
+<link href="../Lecture/text_analysis/lecture_text_analysis_02_claude.html" rel="prev">
+<link href="../images/book-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-57a92833092fd6dc0d7710b6bdfff9c5.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7ef202e96c563d31d9e5226e4d6cabf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-490ba4e843cb1303a232ed0c676384f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/00-setup/01_00_coding_with_AI.html"><strong>环境配置</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/00-setup/01_00_coding_with_AI.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix_python/index.html"><strong>附录：Python 提示词</strong></a></li><li class="breadcrumb-item"><a href="../appendix_python/index.html">概览</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -100,10 +100,10 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="https://lianxhcn.github.io/ds2026/" class="sidebar-logo-link">
-      <img src="../../images/book-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../images/book-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">25PB</a> 
+      <a href="../">25PB</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/lianxhcn/ds2026" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://www.lianxh.cn" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
@@ -120,25 +120,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">封面</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📚课程资料</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📌课件使用指南</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01_homework.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01_homework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🚀作业</span></a>
   </div>
 </li>
@@ -153,37 +153,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_00_coding_with_AI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Lecture/00-setup/01_00_coding_with_AI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_01_install_anaconda.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_01_install_anaconda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Python：安装和环境配置</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_02_jupyter_notebook.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_02_jupyter_notebook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Jupyter Notebook 的使用</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_03_install_FAQs.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_03_install_FAQs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Python 安装常见问题</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_04_markdown.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_04_markdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/00-setup/01_06_conda_env.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/00-setup/01_06_conda_env.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">虚拟环境管理</span></span></a>
   </div>
 </li>
@@ -200,49 +200,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01-DS-intro/ds_intro_01_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/01-DS-intro/ds_intro_02_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/01-DS-intro/ds_intro_02_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/lecture_get_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/lecture_get_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">金融数据获取</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/data_02_get_data_GMD.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/data_02_get_data_GMD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">获取数据：GMD</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_get_data/data_03_TS_SZ_index.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_get_data/data_03_TS_SZ_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">上证指数的时序特征</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_store_structure/lecture_data_management_organization.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_store_structure/lecture_data_management_organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">数据管理与组织</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_manage/lecture_data_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_manage/lecture_data_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">数据管理：格式、存储与工作流</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_clean/lecture_data_clean.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_clean/lecture_data_clean.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">数据清洗</span></span></a>
   </div>
 </li>
@@ -259,43 +259,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_01_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_01_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_box_violin.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_box_violin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">箱型图和小提琴图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">直方图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/graph_dis_kdensity.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/graph_dis_kdensity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">核密度函数图</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_distribution_codes.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_distribution_codes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化 — 配套代码</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/data_visual/lec_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/data_visual/lec_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">数据可视化：一些基本原则</span></span></a>
   </div>
 </li>
@@ -312,19 +312,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_01_introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_01_introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">网络爬虫简介</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_02_sec01_lingnan_prompt.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_02_sec01_lingnan_prompt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">实例-提示词模式：爬取岭南学院教师名录</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/crawing/craw_02_sec02_lingnan_dialog.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/crawing/craw_02_sec02_lingnan_dialog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">实例-对话模式：爬取岭南学院教师名录</span></span></a>
   </div>
 </li>
@@ -341,25 +341,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_01_ailn.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_01_ailn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">金融文本分析（上）——从文本到结构化数据</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_02_ailn.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_02_ailn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">金融文本分析（下）——情感分析与文本建模</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_analysis_01_claude.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_analysis_01_claude.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">文本数据处理基础</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">文本分析：情感分析与主题建模</span></span></a>
   </div>
 </li>
@@ -376,55 +376,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">概览</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a1_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a1_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A1. 环境配置</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a2_project.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a2_project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A2. 项目规划与版本控制</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a3_concepts.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a3_concepts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A3. 提示词核心词汇</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a4_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a4_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A4. 数据获取与清洗</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a5_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a5_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A5. 数据可视化</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a6_modeling.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a6_modeling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A6. 统计建模</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a7_results.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a7_results.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A7. 结果呈现与表格美化</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../appendix_python/a8_workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendix_python/a8_workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">A8. 上下文管理与调试</span></a>
   </div>
 </li>
@@ -440,16 +440,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#主要工具" id="toc-主要工具" class="nav-link active" data-scroll-target="#主要工具"><span class="header-section-number">1.1</span> 主要工具</a></li>
-  <li><a href="#ai-通用工具" id="toc-ai-通用工具" class="nav-link" data-scroll-target="#ai-通用工具"><span class="header-section-number">1.2</span> AI 通用工具</a></li>
-  <li><a href="#ai-编程工具" id="toc-ai-编程工具" class="nav-link" data-scroll-target="#ai-编程工具"><span class="header-section-number">1.3</span> AI 编程工具</a></li>
-  <li><a href="#其他工具" id="toc-其他工具" class="nav-link" data-scroll-target="#其他工具"><span class="header-section-number">1.4</span> 其他工具</a></li>
-  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料"><span class="header-section-number">1.5</span> 参考资料</a></li>
-  <li><a href="#理念" id="toc-理念" class="nav-link" data-scroll-target="#理念"><span class="header-section-number">1.6</span> 理念</a></li>
-  <li><a href="#提示词" id="toc-提示词" class="nav-link" data-scroll-target="#提示词"><span class="header-section-number">1.7</span> 提示词</a></li>
-  <li><a href="#我的使用经验" id="toc-我的使用经验" class="nav-link" data-scroll-target="#我的使用经验"><span class="header-section-number">1.8</span> 我的使用经验</a>
+  <li><a href="#定位与使用方法" id="toc-定位与使用方法" class="nav-link active" data-scroll-target="#定位与使用方法">定位与使用方法</a></li>
+  <li><a href="#最重要的心智模型与-ai-的对话是迭代过程" id="toc-最重要的心智模型与-ai-的对话是迭代过程" class="nav-link" data-scroll-target="#最重要的心智模型与-ai-的对话是迭代过程">最重要的心智模型：与 AI 的对话是迭代过程</a></li>
+  <li><a href="#章节安排" id="toc-章节安排" class="nav-link" data-scroll-target="#章节安排">章节安排</a></li>
+  <li><a href="#推荐参考资料" id="toc-推荐参考资料" class="nav-link" data-scroll-target="#推荐参考资料">推荐参考资料</a>
   <ul class="collapse">
-  <li><a href="#实例使用-ai-写一篇完整的论文推介" id="toc-实例使用-ai-写一篇完整的论文推介" class="nav-link" data-scroll-target="#实例使用-ai-写一篇完整的论文推介"><span class="header-section-number">1.8.1</span> 实例：使用 AI 写一篇完整的论文推介</a></li>
+  <li><a href="#python-语言基础" id="toc-python-语言基础" class="nav-link" data-scroll-target="#python-语言基础">Python 语言基础</a></li>
+  <li><a href="#python-数据分析" id="toc-python-数据分析" class="nav-link" data-scroll-target="#python-数据分析">Python 数据分析</a></li>
+  <li><a href="#金融数据分析" id="toc-金融数据分析" class="nav-link" data-scroll-target="#金融数据分析">金融数据分析</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -457,9 +455,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/00-setup/01_00_coding_with_AI.html"><strong>环境配置</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/00-setup/01_00_coding_with_AI.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix_python/index.html"><strong>附录：Python 提示词</strong></a></li><li class="breadcrumb-item"><a href="../appendix_python/index.html">概览</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></h1>
+<h1 class="title">概览</h1>
 </div>
 
 
@@ -476,177 +474,151 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>我平时主要使用 ChatGPT、Claude code 和 豆包，前者擅长代码生成和调试，后者在文字编排和翻译方面表现出色。有些时候，我会将同一个任务分配给这两个工具，并让他们交叉验证和补充彼此的结果，以提高准确性和可靠性。</p>
-<p>在编写 <code>.ipynb</code> 文件时，我经常使用 VScode 插件 <code>github copilot</code>，它能够根据上下文提供代码建议和补全，并对我选中部分的代码或文字进行智能修改。</p>
-<p>copilot 最核心的功能根据用户编写的提示词，自动生成相应的代码片段或文本内容。详见：</p>
+<section id="定位与使用方法" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="定位与使用方法">定位与使用方法</h2>
+<p>本附录<strong>不是</strong>一份系统的 Python 语法教程。你不需要背语法，不需要记函数名。</p>
+<p>本附录只做一件事：<strong>帮你用准确的专业语言，指挥 AI 工具生成可运行的 Python 代码。</strong></p>
+<p>同样是让 AI 清洗数据，下面两种提示词的效果差距巨大：</p>
 <blockquote class="blockquote">
-<p>连玉君，2025，<a href="https://lianxhcn.github.io/research_with_AI/">Empirical Research with AI</a></p>
+<p>❌ 「帮我清洗一下数据」</p>
 </blockquote>
-<section id="主要工具" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="主要工具"><span class="header-section-number">1.1</span> 主要工具</h2>
-<ul>
-<li><a href="https://chat.openai.com/">ChatGPT</a>：由 OpenAI 开发的聊天机器人，支持代码生成、调试和问题解答。</li>
-<li><a href="https://github.com/github/copilot">Github Copilot</a>：GitHub 推出的 AI 编程助手，能在主流编辑器中实时补全和建议代码。首月免费，后续 $10/月。</li>
-<li><a href="https://claude.ai/">Claude</a>：由 Anthropic 开发的 AI 助手，专注于代码生成和调试。</li>
-</ul>
+<blockquote class="blockquote">
+<p>✅ 「我有一个 pandas 数据框 <code>df</code>，包含 <code>date</code>、<code>stock_code</code>、<code>return</code> 三列，其中 <code>return</code> 列有缺失值。请用<strong>前向填充法</strong>处理缺失值，将 <code>date</code> 列转换为 <strong>datetime 类型</strong>，最后按 <code>stock_code</code> 和 <code>date</code> 升序排列。」</p>
+</blockquote>
+<p>差别只有一个：第二种用了 <strong>Python 专业术语</strong>。有了这些词，AI 才知道你的数据结构、处理目标和技术偏好。<strong>本附录的核心任务，就是帮你积累这套词汇，并给出可以直接套用的提示词框。</strong></p>
 </section>
-<section id="ai-通用工具" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="ai-通用工具"><span class="header-section-number">1.2</span> AI 通用工具</h2>
+<section id="最重要的心智模型与-ai-的对话是迭代过程" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="最重要的心智模型与-ai-的对话是迭代过程">最重要的心智模型：与 AI 的对话是迭代过程</h2>
+<p>初学者最常见的误区是：<strong>期待一次提示词生成完美代码</strong>。这几乎不可能发生。</p>
+<p>真实的工作流是这样的：</p>
+<pre><code>第 1 轮  描述任务背景 + 数据结构
+         → AI 生成基础代码，能跑通
+            ↓
+第 2 轮  「代码报错」或「结果不对」
+         → 贴上错误信息或具体问题，继续追问
+            ↓
+第 3 轮  「结果对了，但图不好看」或「表格太乱」
+         → 用微调提示词修细节
+            ↓
+第 4 轮  「这段代码太慢」或「想理解这行代码」
+         → 优化 / 解释提示词</code></pre>
+<p>因此，本附录中的每一个提示词框，都设计为<strong>两层结构</strong>：</p>
 <ul>
-<li><a href="https://deepseek.ai/">DeepSeek</a>：国内访问顺畅，整体表现不错，但结果的稳定性欠佳。</li>
-<li><a href="https://www.douban.com/">豆包</a>：更适合文字编排、翻译等。</li>
-<li><a href="https://www.kimi.ai/">kimi</a>：与豆包相当。</li>
+<li><strong>第一层（主提示词）</strong>：生成基础代码</li>
+<li><strong>第二层（追问模板）</strong>：根据第一轮的结果，选择合适的追问方式继续迭代</li>
 </ul>
+<p><strong>管理 AI 的上下文记忆也很重要。</strong> 当对话变长，或你开启了新的对话窗口，AI 会「忘记」你之前说过的数据结构和变量名，导致生成的代码和前文对不上。解决方法见 <a href="../appendix_python/a8_workflow.html">A8. 上下文管理与调试</a>。</p>
 </section>
-<section id="ai-编程工具" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="ai-编程工具"><span class="header-section-number">1.3</span> AI 编程工具</h2>
-<p>Note: 这些都是 VScode 中的插件。(<a href="https://www.lianxh.cn/details/1490.html">VScode 插件安装方法</a>；<a href="https://www.lianxh.cn/details/1390.html">常用插件</a>)</p>
-<ul>
-<li><a href="https://www.codeium.com/">Codeium</a>：免费 AI 代码补全工具，支持多种语言和编辑器，提升开发效率。</li>
-<li><a href="https://www.clint.dev/">Clint</a>：基于 AI 的代码补全插件，支持多种编程语言和开发环境。</li>
-<li><a href="https://www.tabnine.com/">Tabnine</a>：基于 AI 的代码补全插件，兼容多种编程语言和开发环境。</li>
-</ul>
-</section>
-<section id="其他工具" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="其他工具"><span class="header-section-number">1.4</span> 其他工具</h2>
-<ul>
-<li><a href="https://replit.com/">Replit</a>：在线编程平台，支持多种语言，适合协作和快速原型开发。</li>
-<li><a href="https://www.kite.com/">Kite</a>：AI 驱动的代码补全工具，支持主流编辑器，提升编程效率。</li>
-<li><a href="https://openai.com/research/codex">Codex</a>：由 OpenAI 开发的代码生成模型，可理解自然语言并生成代码。</li>
-<li><a href="https://www.codeium.com/">Codeium</a>：免费 AI 代码补全工具，支持多种语言和编辑器。</li>
-<li><a href="https://aws.amazon.com/codewhisperer/">CodeWhisperer</a>：AWS 推出的 AI 编程助手，支持云服务集成和代码建议。</li>
-<li><a href="https://polycoder.ai/">PolyCoder</a>：开源代码生成模型，专注于 C 语言代码生成。</li>
-<li><a href="https://arxiv.org/abs/2203.13488">CodeGen</a>：由 Salesforce 研究团队开发的代码生成模型，支持多种编程语言。</li>
-</ul>
-</section>
-<section id="参考资料" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="参考资料"><span class="header-section-number">1.5</span> 参考资料</h2>
-<ul>
-<li><a href="https://explodingtopics.com/blog/chatgpt-alternatives">24 Best ChatGPT Alternatives (February 2025)</a></li>
-<li>陈庭伟, 2025, <a href="https://www.lianxh.cn/details/1578.html">2025年学术研究中的15大最佳AI工具</a></li>
-</ul>
-</section>
-<section id="理念" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="理念"><span class="header-section-number">1.6</span> 理念</h2>
-<blockquote class="blockquote">
-<p>自然语言编程 vs.&nbsp;传统编程</p>
-</blockquote>
-<ul>
-<li>「自然语言编程」与 Python、C++ 等传统编程本质上都是向计算机发出指令，要求其执行特定操作</li>
-<li>区别在于：
-<ul>
-<li>传统编程语言（如 Python、C++）有严格的语法和结构</li>
-<li>自然语言编程则用人类语言（如中文、英文）描述操作</li>
-</ul></li>
-</ul>
-<blockquote class="blockquote">
-<p>思维方式与沟通能力</p>
-</blockquote>
-<ul>
-<li>初学时，自然语言编程似乎更简单</li>
-<li>真正发挥其潜力，关键在于<strong>思维方式</strong>和<strong>沟通方式</strong>（如何提问）</li>
-<li>学习曲线很陡峭：
-<ul>
-<li>知识广度：你要知道很多东西以及他们的关联，才能提出好的问题</li>
-<li>知识深度：基本概念、核心理论、核心算法</li>
-<li>逻辑思维：界定问题、拆解问题、追问（横向 v.s. 纵向）</li>
-<li>语言表达：简洁、准确、清晰</li>
-</ul></li>
-</ul>
-<blockquote class="blockquote">
-<p>最核心的理念转变</p>
-</blockquote>
-<ul>
-<li>提示词 = 自然语言的”代码”</li>
-<li>写好提示词，就像写好 Python/C++ 代码一样重要</li>
-<li>许多高校已开设「提示词工程」课程，「Prompt 工程师」将成为热门职业</li>
-</ul>
-<blockquote class="blockquote">
-<p>推荐学习资料</p>
-</blockquote>
-<ul>
-<li><p><a href="https://www.promptingguide.ai/zh">Prompt Engineering Guide</a></p></li>
-<li><p>吴恩达老师的 <a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/">ChatGPT Prompt Engineering for Developers</a></p>
-<p><a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/20250425003834.png" width="400pt"></a></p></li>
-</ul>
-</section>
-<section id="提示词" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="提示词"><span class="header-section-number">1.7</span> 提示词</h2>
-<blockquote class="blockquote">
-<p>Tips</p>
-</blockquote>
-<ul>
-<li>先粗后细 <a href="https://chatgpt.com/share/680a54a4-1174-8005-bedc-b101549ad45b">e.g.&nbsp;生成讲义</a> v.s 先细后粗</li>
-<li>顺藤摸瓜-迁移 <a href="https://chatgpt.com/share/680a57b2-f4d4-8005-b94a-b9c659e08508">e.g.&nbsp;各种抽样方法</a></li>
-<li>虚构角色 <a href="https://chatgpt.com/share/67f11fc5-b1a0-8005-b559-c479ffbad641">e.g.&nbsp;你是一个资深的英文经济学期刊的编辑</a> → <a href="https://www.lianxh.cn/details/1563.html">推文</a></li>
-</ul>
-<blockquote class="blockquote">
-<p>收集整理自己的提示词</p>
-</blockquote>
-<ul>
-<li><a href="https://blog.finxter.com/wp-content/uploads/2023/03/Finxter_Prompting_OpenAI-1.pdf">ChatGPT Prompting Cheat Sheet</a></li>
-<li><a href="https://www.reddit.com/r/ChatGPTPromptGenius/comments/1icr5au/the_complete_chatgpt_cheat_sheet_2025/">The Complete ChatGPT Cheat Sheet 2025!</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/713023937">Prompt工作手册 - 方法篇</a></li>
-</ul>
-</section>
-<section id="我的使用经验" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="我的使用经验"><span class="header-section-number">1.8</span> 我的使用经验</h2>
-<blockquote class="blockquote">
-<p>我常用的提示词</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/arlionn/UseChatGPT" class="uri">https://github.com/arlionn/UseChatGPT</a></li>
-<li><a href="https://gitee.com/arlionn/UseChatGPT" class="uri">https://gitee.com/arlionn/UseChatGPT</a> (码云版)</li>
-</ul>
-<blockquote class="blockquote">
-<p>借助 AI 找 IV：连玉君的实战经验</p>
-</blockquote>
-<ul>
-<li><a href="https://chatgpt.com/share/67ded832-79bc-8005-bbdb-7a79ebd755c7">帮我找 20 个 IV</a></li>
-<li><a href="https://chatgpt.com/share/680a60aa-3eb4-8005-9478-42828c78c38a">寻找 IV 的提示词如何写？</a></li>
-</ul>
-<section id="实例使用-ai-写一篇完整的论文推介" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="实例使用-ai-写一篇完整的论文推介"><span class="header-section-number">1.8.1</span> 实例：使用 AI 写一篇完整的论文推介</h3>
-<ul>
-<li><a href="https://chatgpt.com/share/6812ec94-a280-8005-9abc-ac0bba09e566">Du-2024-EE-中文精要生成过程</a></li>
-</ul>
-<p><strong>核心提示词：</strong> 参见 <a href="https://github.com/arlionn/UseChatGPT/blob/main/Prompt/useful_Prompts.md">连玉君的 Prompts</a></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-提示词
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Prompt 1</strong>:</p>
-<p>{先上传论文的 PDF 版本给 ChatGPT，然后输入以下提示词：}</p>
-<p>“写一篇论文推介，介绍附件中的论文。先列个提纲给我。”</p>
-<p><strong>Prompt 2</strong>:</p>
-<p>分批次输出吧：</p>
+<section id="章节安排" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="章节安排">章节安排</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>章节</th>
+<th>主题</th>
+<th>核心收获</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../appendix_python/a1_setup.html">A1. 环境配置</a></td>
+<td>包安装、路径、常见报错</td>
+<td>能向 AI 描述你的运行环境</td>
+</tr>
+<tr class="even">
+<td><a href="../appendix_python/a2_project.html">A2. 项目规划与 Git</a></td>
+<td>项目结构、GitHub 同步</td>
+<td>建立可复现的分析项目</td>
+</tr>
+<tr class="odd">
+<td><a href="../appendix_python/a3_concepts.html">A3. 提示词核心词汇</a></td>
+<td>数据类型、数据结构术语</td>
+<td>写出 AI 能理解的提示词</td>
+</tr>
+<tr class="even">
+<td><a href="../appendix_python/a4_data.html">A4. 数据获取与清洗</a></td>
+<td>读取、清洗、合并、变换</td>
+<td>数据处理类提示词模板</td>
+</tr>
+<tr class="odd">
+<td><a href="../appendix_python/a5_visualization.html">A5. 数据可视化</a></td>
+<td>图形要素、风格、金融专题图</td>
+<td>可视化类提示词模板</td>
+</tr>
+<tr class="even">
+<td><a href="../appendix_python/a6_modeling.html">A6. 统计建模</a></td>
+<td>回归、机器学习、模型评估</td>
+<td>建模类提示词模板</td>
+</tr>
+<tr class="odd">
+<td><a href="../appendix_python/a7_results.html">A7. 结果呈现与表格</a></td>
+<td>Notebook 输出、表格美化、导出</td>
+<td>让结果好看、可汇报</td>
+</tr>
+<tr class="even">
+<td><a href="../appendix_python/a8_workflow.html">A8. 上下文管理与调试</a></td>
+<td>验证结果、报错处理、代码加速</td>
+<td>遇到问题时怎么问 AI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议使用方式：</strong></p>
 <ol type="1">
-<li>计量模型的证明和详细推导过程可以省略，但要补充简单直白的语言来解释模型和参数的经济含义</li>
-<li>把数学符号和公式都采用 Latex 格式来写，以保证输出美观</li>
-<li>行内公式采用 <code>$f=x$</code> 格式，单行公式采用 <code>$$f=x$$</code> 格式</li>
-<li>所有括号都用半角模式，中英文混排注意加空格</li>
-<li>不要添加任何表情符号</li>
-<li>按 ‘## 1. xxx’，‘### 1.1 xxx’，‘#### xxx’(不编号) 的格式来分 Section, Subsection, Subsubsection</li>
-<li>参考文献格式：
-<ul>
-<li>xxx, xxx, xxx. (<strong>2023</strong>). xxx. <em>Journal of xxx</em>, 1(1), 1-10. <code>[Link](https://doi.org/{DOI}), [-PDF-](http://sci-hub.ren/{DOI}), [Google](&lt;https://scholar.google.com/scholar?q={Title of the Paper}&gt;).</code></li>
-</ul></li>
-<li>注意：每次生成答案时，都在首行按如下格式添加 label，以便我追问时定位：‘mylabel-01’，‘mylabel-02’，……</li>
+<li>先读完本页，建立迭代工作流的心智模型</li>
+<li>通读 A3，掌握核心专业词汇</li>
+<li>按需查阅 A4–A7 中的提示词框，稍作修改即可使用</li>
+<li>遇到报错或结果不对，直接跳到 A8</li>
 </ol>
-<p><strong>Prompt 3</strong>:</p>
-<p>连续输出，中间无需停顿</p>
-<p><strong>Prompt 4</strong>:</p>
-<p>详细介绍一下 4.4 模型四：部分线性函数系数面板模型（PLFC）中的模型设定和估计方法</p>
-<p><strong>Prompt 5</strong>:</p>
-<p>补充一个 Subsection，添加如下内容： - 为没有任何非参数估计基础的读者解释一下样条基函数（Sieve Estimation） - 再补充一个 subsection，解释一下边际效应的置信区间是如何计算的</p>
-</div>
-</div>
+</section>
+<section id="推荐参考资料" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="推荐参考资料">推荐参考资料</h2>
+<p>为了能够写出逻辑清晰、表述准确的提示词，建议大家抽空翻看一下有关 Python 基本语法、数据分析流程相关书籍，理解常用的概念和框架。</p>
+<section id="python-语言基础" class="level3">
+<h3 class="anchored" data-anchor-id="python-语言基础">Python 语言基础</h3>
+<ul>
+<li>Downey, A. (<strong>2024</strong>). <em>Think Python: How to Think Like a Computer Scientist</em> (3rd ed.). O’Reilly. <a href="https://greenteapress.com/wp/think-python-3rd-edition/">在线阅读</a> | <a href="https://greenteapress.com/thinkpython/thinkpython.pdf">PDF</a>
+<ul>
+<li>Python 入门首选，通俗易懂，适合零基础读者</li>
+</ul></li>
+<li>Johansson, R. (<strong>2024</strong>). <em>Numerical Python: Scientific Computing and Data Science Applications with NumPy, SciPy and Matplotlib</em> (3rd ed.). Apress. <a href="https://link.springer.com/book/10.1007/979-8-8688-0413-7">链接</a> | <a href="https://github.com/Apress/Numerical-Python-3rd-ed">github</a>
+<ul>
+<li>覆盖科学计算、绘图、统计与机器学习初步；第 4 章系统介绍 matplotlib 绘图元素</li>
+</ul></li>
+</ul>
+</section>
+<section id="python-数据分析" class="level3">
+<h3 class="anchored" data-anchor-id="python-数据分析">Python 数据分析</h3>
+<ul>
+<li>McKinney, W. (<strong>2022</strong>). <em>Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter</em> (3rd ed.). O’Reilly. <a href="https://wesmckinney.com/book/">在线阅读</a> | <a href="https://github.com/wesm/pydata-book">github</a>
+<ul>
+<li>pandas 作者亲写，数据处理最权威的参考书</li>
+</ul></li>
+<li>VanderPlas, J. (<strong>2023</strong>). <em>Python Data Science Handbook</em> (2nd ed.). O’Reilly. <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">在线阅读</a> | <a href="https://github.com/jakevdp/PythonDataScienceHandbook">github</a>
+<ul>
+<li>数据分析 + 可视化 + 机器学习，提供 Colab 版本，可直接在线运行</li>
+</ul></li>
+<li>QuantEcon. <a href="https://quantecon.org/lectures/">网站</a> | <a href="https://github.com/QuantEcon">github</a>
+<ul>
+<li>面向经济与金融的开源计算教程，内容持续更新</li>
+</ul></li>
+</ul>
+</section>
+<section id="金融数据分析" class="level3">
+<h3 class="anchored" data-anchor-id="金融数据分析">金融数据分析</h3>
+<ul>
+<li>Scheuch, C., Voigt, S., Weiss, P., &amp; Frey, C. (<strong>2024</strong>). <em>Tidy Finance with Python</em> (1st ed.). Chapman and Hall/CRC. <a href="https://www.tidy-finance.org/python/index.html">在线阅读</a> | <a href="https://github.com/tidy-finance/website/tree/main/python">github</a>
+<ul>
+<li>涵盖股票回报、CAPM、投资组合、Fama-French 因子模型等金融核心主题</li>
+</ul></li>
+<li>Hilpisch, Y. (<strong>2019</strong>). <em>Python for Finance: Mastering Data-Driven Finance</em> (2nd ed.). O’Reilly. <a href="https://www.sea-stat.com/wp-content/uploads/2021/05/Yves-Hilpisch-Python-for-Finance_-Mastering-Data-Driven-Finance-Book-OReilly-2018.pdf">PDF</a> | <a href="https://github.com/yhilpisch/py4fi2nd">github</a>
+<ul>
+<li>量化金融方向，覆盖期权定价、风险管理、算法交易</li>
+</ul></li>
+<li>Jansen, S. (<strong>2020</strong>). <em>Machine Learning for Algorithmic Trading</em> (2nd ed.). <a href="https://ml4trading.io/">网站</a> | <a href="https://github.com/stefan-jansen/machine-learning-for-trading">github</a>
+<ul>
+<li>机器学习在算法交易中的应用，案例丰富</li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -1221,13 +1193,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../Lecture/01_homework.html" class="pagination-link" aria-label="🚀作业">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">🚀作业</span>
+      <a href="../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="pagination-link" aria-label="文本分析：情感分析与主题建模">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">文本分析：情感分析与主题建模</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Lecture/00-setup/01_01_install_anaconda.html" class="pagination-link" aria-label="Python：安装和环境配置">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Python：安装和环境配置</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendix_python/a1_setup.html" class="pagination-link" aria-label="A1. 环境配置">
+        <span class="nav-page-text">A1. 环境配置</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

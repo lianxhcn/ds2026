@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="连玉君">
+<meta name="dcterms.date" content="2026-05-10">
+
+<title>7&nbsp; 数据分析与经济决策 – 数据分析与经济决策</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Lecture/01-DS-intro/ds_intro_02_setup.html" rel="next">
+<link href="../../Lecture/00-setup/01_06_conda_env.html" rel="prev">
+<link href="../../images/book-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-57a92833092fd6dc0d7710b6bdfff9c5.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7ef202e96c563d31d9e5226e4d6cabf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-490ba4e843cb1303a232ed0c676384f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html"><strong>数据分析</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="https://lianxhcn.github.io/ds2026/" class="sidebar-logo-link">
+      <img src="../../images/book-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">25PB</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/lianxhcn/ds2026" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.lianxh.cn" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">封面</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📚课程资料</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📌课件使用指南</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/01_homework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🚀作业</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>环境配置</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_00_coding_with_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">借助 AI 写代码</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_01_install_anaconda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Python：安装和环境配置</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_02_jupyter_notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Jupyter Notebook 的使用</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_03_install_FAQs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Python 安装常见问题</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_04_markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Markdown</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/00-setup/01_06_conda_env.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">虚拟环境管理</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>数据分析</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/01-DS-intro/ds_intro_02_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_get_data/lecture_get_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">金融数据获取</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_get_data/data_02_get_data_GMD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">获取数据：GMD</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_get_data/data_03_TS_SZ_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">上证指数的时序特征</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_store_structure/lecture_data_management_organization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">数据管理与组织</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_manage/lecture_data_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">数据管理：格式、存储与工作流</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_clean/lecture_data_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">数据清洗</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>可视化</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/graph_01_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Python 可视化：简介</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/graph_dis_box_violin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">箱型图和小提琴图</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/graph_dis_histogram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">直方图</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/graph_dis_kdensity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">核密度函数图</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/lec_distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/lec_distribution_codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">数据分布：原理与可视化 — 配套代码</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/data_visual/lec_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">数据可视化：一些基本原则</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>数据爬取</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/crawing/craw_01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">网络爬虫简介</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/crawing/craw_02_sec01_lingnan_prompt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">实例-提示词模式：爬取岭南学院教师名录</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/crawing/craw_02_sec02_lingnan_dialog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">实例-对话模式：爬取岭南学院教师名录</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>文本分析</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/text_analysis/lecture_text_01_ailn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">金融文本分析（上）——从文本到结构化数据</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/text_analysis/lecture_text_02_ailn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">金融文本分析（下）——情感分析与文本建模</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/text_analysis/lecture_text_analysis_01_claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">文本数据处理基础</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Lecture/text_analysis/lecture_text_analysis_02_claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">文本分析：情感分析与主题建模</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>附录：Python 提示词</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">概览</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a1_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A1. 环境配置</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a2_project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A2. 项目规划与版本控制</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a3_concepts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A3. 提示词核心词汇</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a4_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A4. 数据获取与清洗</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a5_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A5. 数据可视化</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a6_modeling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A6. 统计建模</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a7_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A7. 结果呈现与表格美化</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../appendix_python/a8_workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A8. 上下文管理与调试</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#导言" id="toc-导言" class="nav-link active" data-scroll-target="#导言"><span class="header-section-number">7.1</span> 导言</a></li>
+  <li><a href="#什么是数据分析" id="toc-什么是数据分析" class="nav-link" data-scroll-target="#什么是数据分析"><span class="header-section-number">7.2</span> 什么是数据分析？</a>
+  <ul class="collapse">
+  <li><a href="#目标永远是第一位的" id="toc-目标永远是第一位的" class="nav-link" data-scroll-target="#目标永远是第一位的"><span class="header-section-number">7.2.1</span> 目标永远是第一位的</a></li>
+  <li><a href="#数据不是事实本身" id="toc-数据不是事实本身" class="nav-link" data-scroll-target="#数据不是事实本身"><span class="header-section-number">7.2.2</span> 数据不是事实本身</a></li>
+  <li><a href="#本质一方法论用不完美的数据逼近真实规律" id="toc-本质一方法论用不完美的数据逼近真实规律" class="nav-link" data-scroll-target="#本质一方法论用不完美的数据逼近真实规律"><span class="header-section-number">7.2.3</span> 本质一（方法论）：用不完美的数据逼近真实规律</a></li>
+  <li><a href="#本质二功能为决策者减少不确定性" id="toc-本质二功能为决策者减少不确定性" class="nav-link" data-scroll-target="#本质二功能为决策者减少不确定性"><span class="header-section-number">7.2.4</span> 本质二（功能）：为决策者减少不确定性</a></li>
+  <li><a href="#数据分析的结论必须有边界" id="toc-数据分析的结论必须有边界" class="nav-link" data-scroll-target="#数据分析的结论必须有边界"><span class="header-section-number">7.2.5</span> 数据分析的结论必须有边界</a></li>
+  <li><a href="#数据决策-vs.-直觉决策一个简例" id="toc-数据决策-vs.-直觉决策一个简例" class="nav-link" data-scroll-target="#数据决策-vs.-直觉决策一个简例"><span class="header-section-number">7.2.6</span> 数据决策 vs.&nbsp;直觉决策：一个简例</a></li>
+  </ul></li>
+  <li><a href="#三个案例好的分析需要回答哪三个问题" id="toc-三个案例好的分析需要回答哪三个问题" class="nav-link" data-scroll-target="#三个案例好的分析需要回答哪三个问题"><span class="header-section-number">7.3</span> 三个案例：好的分析需要回答哪三个问题</a>
+  <ul class="collapse">
+  <li><a href="#刑责年龄你在优化什么" id="toc-刑责年龄你在优化什么" class="nav-link" data-scroll-target="#刑责年龄你在优化什么"><span class="header-section-number">7.3.1</span> 刑责年龄——你在优化什么？</a></li>
+  <li><a href="#肯尼亚驱虫药你算完整了吗" id="toc-肯尼亚驱虫药你算完整了吗" class="nav-link" data-scroll-target="#肯尼亚驱虫药你算完整了吗"><span class="header-section-number">7.3.2</span> 肯尼亚驱虫药——你算完整了吗？</a></li>
+  <li><a href="#日本失去的三十年时间维度与动态复杂性" id="toc-日本失去的三十年时间维度与动态复杂性" class="nav-link" data-scroll-target="#日本失去的三十年时间维度与动态复杂性"><span class="header-section-number">7.3.3</span> 日本失去的三十年——时间维度与动态复杂性</a></li>
+  </ul></li>
+  <li><a href="#课堂讨论2026-年买房还是等等" id="toc-课堂讨论2026-年买房还是等等" class="nav-link" data-scroll-target="#课堂讨论2026-年买房还是等等"><span class="header-section-number">7.4</span> 课堂讨论：2026 年，买房还是等等？</a></li>
+  <li><a href="#本章小结" id="toc-本章小结" class="nav-link" data-scroll-target="#本章小结"><span class="header-section-number">7.5</span> 本章小结</a></li>
+  <li><a href="#本讲作业" id="toc-本讲作业" class="nav-link" data-scroll-target="#本讲作业"><span class="header-section-number">7.6</span> 本讲作业</a>
+  <ul class="collapse">
+  <li><a href="#作业一把开放问题转化为数据分析问题" id="toc-作业一把开放问题转化为数据分析问题" class="nav-link" data-scroll-target="#作业一把开放问题转化为数据分析问题"><span class="header-section-number">7.6.1</span> 作业一：把开放问题转化为数据分析问题</a></li>
+  <li><a href="#作业二ai-辅助分析日志" id="toc-作业二ai-辅助分析日志" class="nav-link" data-scroll-target="#作业二ai-辅助分析日志"><span class="header-section-number">7.6.2</span> 作业二：AI 辅助分析日志</a></li>
+  <li><a href="#作业三数据说明表" id="toc-作业三数据说明表" class="nav-link" data-scroll-target="#作业三数据说明表"><span class="header-section-number">7.6.3</span> 作业三：数据说明表</a></li>
+  </ul></li>
+  <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">7.7</span> 延伸阅读</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html"><strong>数据分析</strong></a></li><li class="breadcrumb-item"><a href="../../Lecture/01-DS-intro/ds_intro_01_intro.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></h1>
+<p class="subtitle lead">第一讲（上）：是什么，为什么重要</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>连玉君 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<blockquote class="blockquote">
+<p><strong>本章核心问题</strong>：数据分析是什么？它的本质是什么？通过三个案例，理解”好的分析”需要回答哪三个关键问题。</p>
+</blockquote>
+<hr>
+<section id="导言" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="导言"><span class="header-section-number">7.1</span> 导言</h2>
+<p>你在职业生涯中，一定做过一些重要决策：要不要跳槽、公司该不该上这个项目、某项政策要不要推行……请认真想一想：<strong>你有没有系统性地收集过数据来支撑这些决策？</strong></p>
+<p>大多数人的诚实答案是：没有，或者只是象征性地找了几个数字。我们的决策主要靠直觉、经验，或者”感觉差不多”。</p>
+<p>这门课想做一件事：<strong>在直觉和经验之上，建立一套用数据辅助决策的思维框架和操作能力。</strong></p>
+<p>这件事的难点不在于技术，而在于习惯和思维方式。技术是可以学的，思维方式的改变需要更长时间。所以这一讲，我们先不谈工具，只谈”数据分析究竟是什么、它能帮我们做什么、做不到什么”。</p>
+<hr>
+</section>
+<section id="什么是数据分析" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="什么是数据分析"><span class="header-section-number">7.2</span> 什么是数据分析？</h2>
+<section id="目标永远是第一位的" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="目标永远是第一位的"><span class="header-section-number">7.2.1</span> 目标永远是第一位的</h3>
+<p>做数据分析，最常见的错误不是方法选错了，而是<strong>问题没问清楚</strong>。</p>
+<p>分析者拿到数据，急于建模、跑回归、出图表，最后得到一堆结果，却发现它们回答不了决策者真正关心的问题。</p>
+<p><strong>目标决定数据，数据决定方法，方法服务于结论。</strong> 离开目标谈分析，就像没有目的地的导航——走得越快，越容易偏离。</p>
+<p>数据分析之前，至少要问清楚四个问题：</p>
+<ul>
+<li>谁在做决策？</li>
+<li>他面对哪些行动选项？</li>
+<li>他希望最大化或最小化什么？</li>
+<li>做错决策的代价是什么？</li>
+</ul>
+<p>同样一组房价数据，买房者、银行、政府、中介关注的问题完全不同，需要的分析也截然不同。这四个问题决定了后续的数据收集、变量选择、模型设定和结论解释。</p>
+<p>数据分析的目标，大体可以归为四类：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 17%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>目标类型</th>
+<th>核心问题</th>
+<th>例子</th>
+<th>常用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>描述</strong> (Describe)</td>
+<td>发生了什么？</td>
+<td>某城市房价过去三年如何变化？</td>
+<td>汇总统计、可视化</td>
+</tr>
+<tr class="even">
+<td><strong>解释/因果</strong> (Explain)</td>
+<td>为什么发生？</td>
+<td>降低利率是否推高了房价？</td>
+<td>RCT、DID、IV、RDD</td>
+</tr>
+<tr class="odd">
+<td><strong>预测</strong> (Predict)</td>
+<td>未来会怎样？</td>
+<td>明年房价继续下跌的概率有多大？</td>
+<td>时间序列、机器学习</td>
+</tr>
+<tr class="even">
+<td><strong>决策/评价</strong> (Evaluate)</td>
+<td>某干预有效吗？</td>
+<td>刑责年龄政策是否减少了犯罪？</td>
+<td>成本收益、政策评价</td>
+</tr>
+</tbody>
+</table>
+<p>这四类目标对应不同的分析逻辑，<strong>不能相互替代</strong>。知道房价在下跌，是描述；预测未来走势，是预测；判断某政策是否导致了下跌，是因果分析；决定自己是否应该买房，是决策问题——常见的错误，正是把这四类问题混在一起。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>探索性分析也是合法目标</strong></p>
+<p>“目标第一位”有一个重要例外：<strong>探索性数据分析（EDA）</strong>。有时候你并不预设问题，而是通过浏览和可视化数据来<em>发现</em>值得追问的问题——数据本身会”开口说话”，告诉你哪里有异常、哪里有规律。</p>
+<p>真实的分析工作，往往是”目标引导分析”和”数据启发目标”的来回迭代，而不是单向线性的流程。</p>
+</div>
+</div>
+</section>
+<section id="数据不是事实本身" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="数据不是事实本身"><span class="header-section-number">7.2.2</span> 数据不是事实本身</h3>
+<p>在进入方法论讨论之前，有一点必须先说清楚：<strong>数据不等于事实本身。</strong></p>
+<p>数据是事实在某种制度、平台、工具或组织流程下留下的<strong>记录</strong>。理解数据，必须理解数据是如何生成的。举几个例子：</p>
+<ul>
+<li>房产平台上的<strong>挂牌价</strong>，不等于真实成交价</li>
+<li>电商<strong>评论</strong>，不等于所有消费者的真实评价——沉默的大多数不发声</li>
+<li><strong>问卷数据</strong>只反映受访者愿意回答、能够回答以及被问到的问题</li>
+<li><strong>股票价格</strong>来自市场交易，但财务报表来自会计制度，两者口径不同</li>
+<li><strong>企业数据库</strong>通常只包括已进入系统的客户，不包括从未接触企业的潜在客户</li>
+</ul>
+<p>可以把观测数据理解为真实世界经过一系列规则过滤之后的结果：</p>
+<p><span class="math display">\[
+D = g(W,\ R,\ M,\ S)
+\]</span></p>
+<p>其中，<span class="math inline">\(D\)</span> 是观测数据，<span class="math inline">\(W\)</span> 是真实世界，<span class="math inline">\(R\)</span> 是记录规则，<span class="math inline">\(M\)</span> 是测量方式，<span class="math inline">\(S\)</span> 是样本选择机制。</p>
+<p>这意味着，数据分析不能只问”有没有数据”，还要问：这些数据是谁记录的？哪些对象被纳入，哪些被排除？变量的定义是否稳定？是否存在系统性遗漏或选择性报告？</p>
+<p><strong>如果忽视数据生成机制，后续模型越复杂，误导性可能越强。</strong></p>
+</section>
+<section id="本质一方法论用不完美的数据逼近真实规律" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="本质一方法论用不完美的数据逼近真实规律"><span class="header-section-number">7.2.3</span> 本质一（方法论）：用不完美的数据逼近真实规律</h3>
+<p>数据分析的第一个本质，是一个认识论层面的挑战：<strong>我们拥有的数据几乎永远是不完美的，但必须从中推断出尽量可靠的结论。</strong></p>
+<p>现实数据的不完美体现在多个维度：有限性（只有部分样本）、残缺性（缺失值和测量误差）、有偏性（样本不代表总体）、内生性（解释变量与被解释变量相互影响）。</p>
+<p>统计推断的核心承诺：<strong>我不知道确切答案，但我可以给你一个估计值，并且告诉你我有多不确定</strong>。置信区间、标准误、p 值，都是在量化这种不确定性。</p>
+<p>了解常见偏误来源，是做好数据分析的基础：</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figs/ds_intro_fig08_bias_sources.png" class="img-fluid figure-img"></p>
+<figcaption>数据分析中常见的偏误来源</figcaption>
+</figure>
+</div>
+<p>这些偏误往往无法通过更复杂的模型自动消除——很多时候需要回到数据生成机制本身，从源头识别问题。</p>
+</section>
+<section id="本质二功能为决策者减少不确定性" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="本质二功能为决策者减少不确定性"><span class="header-section-number">7.2.4</span> 本质二（功能）：为决策者减少不确定性</h3>
+<p>数据分析的第二个本质，是关于它的<strong>价值定位</strong>：通过收集和处理信息，降低决策者面临的不确定性，从而改善决策质量。</p>
+<p>不确定性至少有两类：</p>
+<ul>
+<li><strong>事实不确定性</strong>：我不清楚当前真实情况是什么（例：同小区真实成交价是多少？）</li>
+<li><strong>结果不确定性</strong>：我不知道采取某个行动之后未来会发生什么（例：现在买房，明年价格会继续跌吗？）</li>
+</ul>
+<p>一个简洁的决策框架：</p>
+<p><span class="math display">\[
+a^* = \arg\max_{a \in \mathcal{A}}\ \mathbb{E}\bigl[U(a,\,\theta) \mid D,\, I\bigr]
+\]</span></p>
+<p>其中，<span class="math inline">\(a\)</span> 是可选行动，<span class="math inline">\(\theta\)</span> 是未知状态，<span class="math inline">\(D\)</span> 是数据，<span class="math inline">\(I\)</span> 是已有信息，<span class="math inline">\(U(a,\theta)\)</span> 是在状态 <span class="math inline">\(\theta\)</span> 下采取行动 <span class="math inline">\(a\)</span> 的收益。数据分析通过提供更好的 <span class="math inline">\(D\)</span>，帮助决策者缩窄对 <span class="math inline">\(\theta\)</span> 的不确定范围，从而改善 <span class="math inline">\(a^*\)</span> 的质量。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figs/ds_intro_fig09_decision_framework.png" class="img-fluid figure-img"></p>
+<figcaption>不确定性下的决策框架</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>不确定性 ≠ 信息不对称，请注意区分</strong></p>
+<ul>
+<li><strong>不确定性（Uncertainty）</strong>：我自己对某事不够确定——<em>一个主体内部</em>的问题。</li>
+<li><strong>信息不对称（Information Asymmetry）</strong>：我和另一方之间存在信息差——<em>两个主体之间</em>的问题（Akerlof，1970：二手车市场的逆向选择）。</li>
+</ul>
+<p>信息不对称是不确定性在<em>经济博弈语境</em>下的特殊形式，是经济学中独特且重要的分析框架。但数据分析的价值远不止于此，它覆盖所有需要从数据中提取信息以支持决策的场景，无论是否涉及多方博弈。</p>
+</div>
+</div>
+</section>
+<section id="数据分析的结论必须有边界" class="level3" data-number="7.2.5">
+<h3 data-number="7.2.5" class="anchored" data-anchor-id="数据分析的结论必须有边界"><span class="header-section-number">7.2.5</span> 数据分析的结论必须有边界</h3>
+<p>好的数据分析不给出脱离条件的绝对结论。同样是分析 2026 年买房问题，以下两种结论的质量截然不同：</p>
+<blockquote class="blockquote">
+<p>❌ <strong>口号式</strong>：2026 年不适合买房。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>✅ <strong>有边界的</strong>：在居民收入预期偏弱、二手房挂牌量较高、成交周期较长、租售比较低且家庭居住需求并不迫切的条件下，2026 年对投资型购房者可能不是理想入场时点；但对于现金流稳定、长期自住、能够获得明显折价且交易成本可控的购房者，结论可能不同。</p>
+</blockquote>
+<p>任何数据分析结论，都至少要说明三件事：数据<strong>支持</strong>了什么；结论<strong>依赖</strong>哪些假设；结论<strong>不能外推</strong>到哪里。可以把它概括为：</p>
+<p><span class="math display">\[
+\text{结论} = f(\text{数据},\ \text{假设},\ \text{方法},\ \text{情境})
+\]</span></p>
+<p>这也解释了为什么同一组数据，不同研究者可能得出不同判断——差异不一定来自谁”不懂数据”，更可能来自分析目标、假设、样本选择和风险权重的差异。<strong>分析框架本身是有立场的</strong>，好的分析者会把这些立场显性化，而不是把它们藏在”客观分析”的外衣下。</p>
+</section>
+<section id="数据决策-vs.-直觉决策一个简例" class="level3" data-number="7.2.6">
+<h3 data-number="7.2.6" class="anchored" data-anchor-id="数据决策-vs.-直觉决策一个简例"><span class="header-section-number">7.2.6</span> 数据决策 vs.&nbsp;直觉决策：一个简例</h3>
+<p><strong>2021 蒙特卡洛大师赛，八强赛：卢布列夫 vs.&nbsp;纳达尔</strong></p>
+<p>纳达尔在红土赛场几乎不可战胜，但卢布列夫的团队在赛前做了一件事：<strong>系统分析纳达尔历史比赛中的落点热力图和移动重心数据</strong>。他们发现：纳达尔习惯性地在某种情境下预判对角线来球，重心会提前偏向那一侧——此时沿直线打回马枪，得分概率显著提高。</p>
+<p>战术实施：先持续攻击纳达尔的反拍侧，强化其预判习惯，然后在关键球上突然变线。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/20220722113618.png" class="img-fluid figure-img"></p>
+<figcaption>网球落点热力图（示意）</figcaption>
+</figure>
+</div>
+<p>核心信息只有一句：<strong>基于数据的战术分析，帮助球员做出了单凭经验和直觉无法做出的决策。</strong> 它同时提示了一个博弈维度——<strong>对手也在分析你</strong>。金融市场中同样如此：你的交易行为构成数据，对手方也在分析这些数据并据此调整策略，这正是量化交易和算法博弈的底层逻辑。</p>
+<hr>
+</section>
+</section>
+<section id="三个案例好的分析需要回答哪三个问题" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="三个案例好的分析需要回答哪三个问题"><span class="header-section-number">7.3</span> 三个案例：好的分析需要回答哪三个问题</h2>
+<p>单凭直觉做决策，通常在三个维度上犯错：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 25%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>失败模式</th>
+<th>表现</th>
+<th>对应案例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>目标设错了</strong></td>
+<td>在优化一个错误的指标，或遗漏了重要利益相关方</td>
+<td>刑责年龄</td>
+</tr>
+<tr class="even">
+<td><strong>效果算不全</strong></td>
+<td>只看到直接效果，忽视了间接效果和外部性</td>
+<td>肯尼亚驱虫药</td>
+</tr>
+<tr class="odd">
+<td><strong>时间维度短</strong></td>
+<td>短期数据和长期规律截然相反</td>
+<td>日本三十年</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>阅读指引</strong></p>
+<p>每个案例都有两条线：一条是<strong>事件本身</strong>（政策背景、数据发现、历史经过），另一条是<strong>方法论启示</strong>（这个案例告诉我们分析时应该注意什么）。案例可以忘，方法论启示要带走。</p>
+</div>
+</div>
+<section id="刑责年龄你在优化什么" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="刑责年龄你在优化什么"><span class="header-section-number">7.3.1</span> 刑责年龄——你在优化什么？</h3>
+<section id="背景" class="level4" data-number="7.3.1.1">
+<h4 data-number="7.3.1.1" class="anchored" data-anchor-id="背景"><span class="header-section-number">7.3.1.1</span> 背景</h4>
+<p>全球多个国家近年来重新审视<strong>刑事责任年龄（Age of Criminal Responsibility）</strong>。各国应对方向出现明显分歧：</p>
+<ul>
+<li><strong>降低</strong>：日本（2000 年部分罪行从 16 岁降至 14 岁）；中国（2021 年对极端严重犯罪从 14 岁降至 12 岁，须最高检核准）</li>
+<li><strong>提高</strong>：苏格兰（2021 年从 8 岁提高至 12 岁）；英格兰和威尔士讨论从 10 岁提高至 14 岁；多数北欧国家维持 15 岁，强调教育矫正</li>
+</ul>
+<p><strong>同样面对”未成年人犯罪增加”这个事实，为什么有人降低年龄、有人提高年龄？答案不在数据本身，而在分析者在优化什么。</strong></p>
+</section>
+<section id="三类法律机制" class="level4" data-number="7.3.1.2">
+<h4 data-number="7.3.1.2" class="anchored" data-anchor-id="三类法律机制"><span class="header-section-number">7.3.1.2</span> 三类法律机制</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>机制</th>
+<th>逻辑</th>
+<th>短期效果</th>
+<th>长期风险</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>威慑</strong></td>
+<td>处罚概率上升 → 潜在违法者减少犯罪</td>
+<td>可能降低犯罪率</td>
+<td>对未成年人效果有限（前额叶未发育成熟）</td>
+</tr>
+<tr class="even">
+<td><strong>失能</strong></td>
+<td>羁押 → 短期内无法继续作案</td>
+<td>直接减少在押期间犯罪</td>
+<td>不改变长期偏好</td>
+</tr>
+<tr class="odd">
+<td><strong>教育矫治</strong></td>
+<td>心理干预 + 社区矫正 → 降低再犯概率</td>
+<td>威慑效果弱</td>
+<td>长期人力资本效益高</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="逐层展开目标框架" class="level4" data-number="7.3.1.3">
+<h4 data-number="7.3.1.3" class="anchored" data-anchor-id="逐层展开目标框架"><span class="header-section-number">7.3.1.3</span> 逐层展开目标框架</h4>
+<p><strong>第一层：只看当下这个案件</strong> → 关注受害者，关注此时此刻 → 倾向降低刑责年龄</p>
+<p>逻辑：犯了严重的罪，就应该承担后果，年龄不应是庇护的理由。这个直觉在情感上有强大说服力。</p>
+<p><strong>第二层：看当事人的全生命周期</strong></p>
+<p>数据说话：美国联邦司法统计局数据，在成人监狱服刑后获释的未成年人，5 年内再次被捕率约 60-70%；专业青少年矫正项目的类似人群，再犯率 25-35%。刑事案底还会永久影响就业、信贷和社会融入。结论开始动摇：刑事追诉可能不是减少了犯罪，而是把一个可能改变轨道的人推向了长期犯罪的通道。</p>
+<p><strong>第三层：看社会总成本</strong></p>
+<p>美国兰德公司（RAND）研究：一个高风险青少年罪犯的”终身社会成本”（含受害者损失、司法成本、监禁成本、税收损失）约为 160 万至 480 万美元。关入成人监狱 vs.&nbsp;投入高质量教育矫正项目，哪个社会成本更低？在绝大多数情境下，后者更优。</p>
+<p><strong>第四层：看代际效应</strong></p>
+<p>父母入狱对子女有显著长期负面影响（经济压力、监护缺失、心理创伤），子女进入司法系统的概率显著上升——“<strong>司法介入的代际传递</strong>”。在这个框架下，将更多未成年人送入监狱的政策，可能通过代际效应在 15-20 年后<strong>增加</strong>社会犯罪成本。</p>
+</section>
+<section id="方法论启示" class="level4" data-number="7.3.1.4">
+<h4 data-number="7.3.1.4" class="anchored" data-anchor-id="方法论启示"><span class="header-section-number">7.3.1.4</span> 方法论启示</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>分析框架</th>
+<th>关注谁</th>
+<th>关注何时</th>
+<th>倾向性结论</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>当下惩处</td>
+<td>受害者</td>
+<td>此时此刻</td>
+<td>降低刑责年龄</td>
+</tr>
+<tr class="even">
+<td>全生命周期</td>
+<td>当事人</td>
+<td>终身</td>
+<td>存疑或提高</td>
+</tr>
+<tr class="odd">
+<td>社会总成本</td>
+<td>全社会</td>
+<td>中长期</td>
+<td>投资矫正项目</td>
+</tr>
+<tr class="even">
+<td>代际效应</td>
+<td>下一代</td>
+<td>跨代</td>
+<td>谨慎追诉</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>核心启示</strong>：同一批数据，面对同一个社会现象，目标框架——谁的利益、什么时间跨度——不同，结论可以<strong>完全相反</strong>。数据分析之前，必须把”你在优化什么”这个问题想清楚。</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="肯尼亚驱虫药你算完整了吗" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="肯尼亚驱虫药你算完整了吗"><span class="header-section-number">7.3.2</span> 肯尼亚驱虫药——你算完整了吗？</h3>
+<section id="实验背景" class="level4" data-number="7.3.2.1">
+<h4 data-number="7.3.2.1" class="anchored" data-anchor-id="实验背景"><span class="header-section-number">7.3.2.1</span> 实验背景</h4>
+<p>1998 年，经济学家 Michael Kremer 和 Edward Miguel 在肯尼亚西部布西亚地区对约 75 所小学开展了一项<strong>随机对照试验（RCT）</strong>：给学龄儿童定期发放驱虫药，成本约 0.5 美元/人/年。当地约 75% 的学龄儿童感染肠道寄生虫，影响营养吸收和认知发育。</p>
+</section>
+<section id="第一层直接效果" class="level4" data-number="7.3.2.2">
+<h4 data-number="7.3.2.2" class="anchored" data-anchor-id="第一层直接效果"><span class="header-section-number">7.3.2.2</span> 第一层：直接效果</h4>
+<p>感染率明显下降，腹痛和贫血症状减轻，课堂出勤率提高约 25%。如果分析到此为止，结论是：驱虫药有效，应该推广。大多数 NGO 报告会在这里收笔。</p>
+</section>
+<section id="第二层外部性真正精彩的地方" class="level4" data-number="7.3.2.3">
+<h4 data-number="7.3.2.3" class="anchored" data-anchor-id="第二层外部性真正精彩的地方"><span class="header-section-number">7.3.2.3</span> 第二层：外部性（真正精彩的地方）</h4>
+<p>Kremer 和 Miguel 发现了一个意外信号：<strong>接受干预学校周边 6 公里范围内、未参与实验的学校，儿童的健康状况也有所改善。</strong> 这些孩子没有拿到任何驱虫药，但他们变健康了。</p>
+<p>原因：寄生虫通过粪口途径传播，当干预学校的感染率下降后，社区环境中的虫卵密度降低，保护了周边未接受干预的儿童。这是典型的<strong>正外部性</strong>：</p>
+<p><span class="math display">\[
+\text{政策效果} = \text{直接效果} + \text{溢出效果}
+\]</span></p>
+<p>如果评估只看直接受益者，就<strong>系统性低估</strong>了项目的真实价值。</p>
+</section>
+<section id="第三层20-年后的追踪" class="level4" data-number="7.3.2.4">
+<h4 data-number="7.3.2.4" class="anchored" data-anchor-id="第三层20-年后的追踪"><span class="header-section-number">7.3.2.4</span> 第三层：20 年后的追踪</h4>
+<p>2021 年，20 年追踪研究结果：幼年接受干预的儿童，成年后时薪比对照组高约 <strong>14%</strong>，工作时间更长，更多从事技能性就业，消费支出和储蓄率均更高。</p>
+<p>因果链条：驱虫 → 改善营养与认知发育 → 提高课堂专注力 → 提高受教育年限 → 提升人力资本 → 20 年后更高劳动收入。每投入 1 美元，折现后的社会回报约为 <strong>30 至 100 美元</strong>。</p>
+</section>
+<section id="为什么市场没有自动解决" class="level4" data-number="7.3.2.5">
+<h4 data-number="7.3.2.5" class="anchored" data-anchor-id="为什么市场没有自动解决"><span class="header-section-number">7.3.2.5</span> 为什么市场没有自动解决？</h4>
+<p>三重市场失灵叠加，任何一重都足以导致驱虫药供给不足：</p>
+<ol type="1">
+<li><strong>信息不对称</strong>：家长不知道驱虫药有如此高的长期回报</li>
+<li><strong>正外部性导致私人供给不足</strong>：私人收益 &lt; 社会收益</li>
+<li><strong>贫困陷阱</strong>：健康差 → 学习差 → 贫困 → 没钱买药 → 健康差（自我强化闭环）</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>帐篷 vs.&nbsp;驱虫药</strong></p>
+<p>很多 NGO 更愿意捐赠帐篷——可见、温暖、易于拍照。驱虫药是不起眼的白色小药片。但相同成本下，驱虫药的健康和教育产出远高于帐篷。</p>
+<p>这种<strong>可见性偏差（Visibility Bias）</strong>——倾向于投资看得见效果的事物，忽视效果隐蔽但更高效的事物——在企业、政府和个人决策中无处不在。数据分析的一大价值，正是让这种”隐形的高回报”变得可见。</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>核心启示</strong>：不考虑外部性，几乎必然低估一项干预的真实价值。好的数据分析要主动问：<strong>这件事的影响，是否波及了我目前没有测量的群体或渠道？</strong></p>
+</blockquote>
+<p>2019 年，Michael Kremer 与 Abhijit Banerjee、Esther Duflo 共同获得诺贝尔经济学奖，表彰他们用 RCT 方法评估扶贫干预效果的系列研究。</p>
+<hr>
+</section>
+</section>
+<section id="日本失去的三十年时间维度与动态复杂性" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="日本失去的三十年时间维度与动态复杂性"><span class="header-section-number">7.3.3</span> 日本失去的三十年——时间维度与动态复杂性</h3>
+<section id="时间线" class="level4" data-number="7.3.3.1">
+<h4 data-number="7.3.3.1" class="anchored" data-anchor-id="时间线"><span class="header-section-number">7.3.3.1</span> 时间线</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figs/ds_intro_fig10_japan_timeline.png" class="img-fluid figure-img"></p>
+<figcaption>日本经济：从繁荣到”失去的三十年”</figcaption>
+</figure>
+</div>
+<p><strong>1970—1984 高速增长期</strong>：制造业（汽车、电子、钢铁）全球竞争力达到顶峰，对美出口激增，GDP 年均增速 4-6%，人均 GDP 超过多数欧洲国家。</p>
+<p><strong>1985 广场协议</strong>：五国协议要求日元大幅升值。1985—1988 年间，日元兑美元从约 260 升至约 128，升值近 50%，出口竞争力急剧下降。<strong>日本政府应对</strong>：将利率从 5% 大幅降至 2.5% 并财政扩张。</p>
+<p><strong>1986—1989 泡沫形成</strong>：超低利率引发大规模资产价格上涨。日经 225 从约 13,000 点飙升至 1989 年底的 <strong>38,916 点</strong>（4 年涨 3 倍）；东京地价 5 年内上涨约 3 倍；银行以升值资产为抵押大量放贷，形成正反馈循环。</p>
+<p><strong>关键问题</strong>：在这个阶段，每一步决策在当时的数据下看起来都是”合理的”——这正是时间维度问题的核心：<strong>局部合理的短期决策，可以累积成长期灾难。</strong></p>
+<p><strong>1989—1990 主动刺破泡沫</strong>：央行将基准利率从 2.5% 提升至 6%，限制房地产贷款。资产价格随即崩溃：日经指数跌超 60%，东京商业地产下跌约 70%，住宅价格下跌 40-60% 且持续 15 年。</p>
+</section>
+<section id="房价的长期演变" class="level4" data-number="7.3.3.2">
+<h4 data-number="7.3.3.2" class="anchored" data-anchor-id="房价的长期演变"><span class="header-section-number">7.3.3.2</span> 房价的长期演变</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figs/ds_intro_fig11_tokyo_house_price_index.png" class="img-fluid figure-img"></p>
+<figcaption>东京住宅价格指数（1990-2024）</figcaption>
+</figure>
+</div>
+<p>泡沫破裂后，东京住宅价格持续下跌直至 2005 年前后见底，累计跌去峰值约 60-65%。2013 年安倍经济学启动后开始温和回升，2020 年后受低利率和外资流入影响加速上涨，但 2024 年整体水平仍未完全恢复到 1990 年峰值。</p>
+</section>
+<section id="泡沫破裂的多方面影响" class="level4" data-number="7.3.3.3">
+<h4 data-number="7.3.3.3" class="anchored" data-anchor-id="泡沫破裂的多方面影响"><span class="header-section-number">7.3.3.3</span> 泡沫破裂的多方面影响</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figs/ds_intro_fig12_japan_impact_overview.png" class="img-fluid figure-img"></p>
+<figcaption>泡沫破裂的多方面影响</figcaption>
+</figure>
+</div>
+<p>泡沫破裂的影响，远不止于房价本身，而是通过多个渠道向整个经济扩散：不良资产 → 银行惜贷 → 企业融资困难 → 就业下降 → 消费萎缩 → 通缩预期形成 → 需求进一步萎缩。这种<strong>相互强化的负反馈循环</strong>，是失去三十年难以终结的根本原因。</p>
+</section>
+<section id="为什么十年变成了三十年" class="level4" data-number="7.3.3.4">
+<h4 data-number="7.3.3.4" class="anchored" data-anchor-id="为什么十年变成了三十年"><span class="header-section-number">7.3.3.4</span> 为什么”十年”变成了”三十年”？</h4>
+<p><strong>资产负债表衰退（辜朝明）</strong>：泡沫时期积累的巨额债务，在资产大幅缩水后仍然存在。面对负净资产，即使利率降至零，企业和家庭的第一优先级也是还债，而非借钱投资消费。传统货币政策（降息）因此失去效力——问题不是资金成本，而是<strong>需求意愿本身崩塌了</strong>。</p>
+<p><strong>通缩预期的自我实现</strong>：物价下跌 → 消费者推迟购买 → 需求萎缩 → 物价继续下跌。预期本身成为了必须测量和管理的变量。</p>
+<p><strong>政策节奏的反复</strong>：1997 年，在经济尚未充分复苏时上调消费税，直接中断了脆弱的复苏进程——单次决策的内部逻辑正确，但放在整个动态序列中，时机选择是错误的。</p>
+<blockquote class="blockquote">
+<p><strong>核心启示</strong>：经济系统有复杂的反馈机制和长时间滞后。泡沫形成期的每一步看起来都合理，破裂初期的每一步刺激也看起来合理——但这些”局部合理”累积成了三十年的停滞。好的数据分析必须追问：<strong>如果这个趋势持续 10 年，系统会走向哪里？反馈机制是放大还是稳定这个趋势？</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+</section>
+<section id="课堂讨论2026-年买房还是等等" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="课堂讨论2026-年买房还是等等"><span class="header-section-number">7.4</span> 课堂讨论：2026 年，买房还是等等？</h2>
+<p>这是一个典型的开放性经济决策问题——没有标准答案，但不是没有分析框架。用前三个案例的方法论启示来结构这场讨论：</p>
+<p><strong>问题一：你是谁，你在优化什么？</strong>（刑责年龄案例的启示）</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 32%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>提问者</th>
+<th>真实关切</th>
+<th>核心分析变量</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>25 岁应届毕业生</td>
+<td>买 vs.&nbsp;租，月供可负担吗？</td>
+<td>房价收入比、租售比、就业稳定性</td>
+</tr>
+<tr class="even">
+<td>改善型置换家庭</td>
+<td>学区、居住品质、保值</td>
+<td>区域供需、学区政策变化风险</td>
+</tr>
+<tr class="odd">
+<td>投资型购房者</td>
+<td>资本增值、租金回报</td>
+<td>租售比、空置率、流动性风险</td>
+</tr>
+<tr class="even">
+<td>政策制定者</td>
+<td>金融稳定、居住公平</td>
+<td>系统性风险指标、住房可负担性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>问题二：你有没有算完整？</strong>（肯尼亚案例的启示）</p>
+<p>容易被忽视的”隐藏成本”：持有成本（物业费、维修、利息、机会成本）；流动性成本（房产变现需要时间和交易成本）；政策风险（房产税、限购、学区政策变动）；人口趋势（城市净流入/净流出）。</p>
+<p><strong>问题三：你的时间维度是多少？</strong>（日本案例的启示）</p>
+<p>短期（1-3 年）和长期（10-20 年）的逻辑可能截然相反。中国有没有”日本化”的风险？值得长期追踪的指标：房价收入比、居民杠杆率、土地财政依赖度、通缩信号（PPI、CPI 分化）。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>这个讨论引出后续课程的核心方法</strong></p>
+<p>学完这门课，你至少可以把”感觉现在不是时候”替换成有依据的条件判断。这个问题涉及的分析方法将贯穿整个学期：</p>
+<ul>
+<li>分析历史价格数据 → <strong>时间序列分析</strong></li>
+<li>比较不同城市或政策下的价格走势 → <strong>面板数据与政策评价（DID）</strong></li>
+<li>预测未来走势 → <strong>预测建模与机器学习</strong></li>
+<li>量化不确定性 → <strong>置信区间与情景分析</strong></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="本章小结" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="本章小结"><span class="header-section-number">7.5</span> 本章小结</h2>
+<p><strong>五个关键认识：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>认识</th>
+<th>核心内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>目标第一位</td>
+<td>先想清楚谁在决策、优化什么、约束是什么</td>
+</tr>
+<tr class="even">
+<td>数据 ≠ 事实</td>
+<td>数据是经过记录规则、测量方式和样本选择过滤后的世界</td>
+</tr>
+<tr class="odd">
+<td>方法论本质</td>
+<td>从不完美数据提取可靠规律，并量化不确定性</td>
+</tr>
+<tr class="even">
+<td>功能本质</td>
+<td>在有限信息下改善决策，而非消除所有不确定性</td>
+</tr>
+<tr class="odd">
+<td>结论有边界</td>
+<td>好的结论是有条件的、有假设的、有适用范围的</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三个案例的统一框架：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>案例</th>
+<th>失败模式</th>
+<th>核心追问</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>刑责年龄</td>
+<td>目标设错了</td>
+<td>谁的利益？什么时间跨度？</td>
+</tr>
+<tr class="even">
+<td>肯尼亚驱虫药</td>
+<td>效果算不全</td>
+<td>有没有考虑外部性和溢出？</td>
+</tr>
+<tr class="odd">
+<td>日本三十年</td>
+<td>时间维度太短</td>
+<td>短期最优是否也是长期最优？</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="本讲作业" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="本讲作业"><span class="header-section-number">7.6</span> 本讲作业</h2>
+<section id="作业一把开放问题转化为数据分析问题" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="作业一把开放问题转化为数据分析问题"><span class="header-section-number">7.6.1</span> 作业一：把开放问题转化为数据分析问题</h3>
+<p>从以下问题中选择一个（或自选类似的开放性经济决策问题）：</p>
+<ul>
+<li>2026 年是否适合买房？</li>
+<li>某只股票近期上涨是否有基本面支撑？</li>
+<li>某个城市房价是否已接近底部？</li>
+<li>某类职业的招聘需求是否在持续下降？</li>
+</ul>
+<p><strong>要求：</strong> 明确决策主体和行动选项；明确核心目标（优化什么）；列出至少 3 个关键变量和 2 个可能的数据来源；说明可能存在的数据偏误；给出初步分析思路。</p>
+</section>
+<section id="作业二ai-辅助分析日志" class="level3" data-number="7.6.2">
+<h3 data-number="7.6.2" class="anchored" data-anchor-id="作业二ai-辅助分析日志"><span class="header-section-number">7.6.2</span> 作业二：AI 辅助分析日志</h3>
+<p>用 AI 辅助完成作业一，提交：</p>
+<ul>
+<li>一条用于<strong>问题拆解</strong>的提示词及 AI 输出</li>
+<li>一条让 AI 扮演<strong>“反方审查员”</strong> 检查分析漏洞的提示词及 AI 输出</li>
+<li>AI 输出中<strong>至少一处错误或不足</strong>的识别与人工修正说明</li>
+</ul>
+</section>
+<section id="作业三数据说明表" class="level3" data-number="7.6.3">
+<h3 data-number="7.6.3" class="anchored" data-anchor-id="作业三数据说明表"><span class="header-section-number">7.6.3</span> 作业三：数据说明表</h3>
+<p>选择一个与你分析问题相关的数据集，填写以下说明表：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 数据说明表</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>数据名称：</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>数据来源（网址）：</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>获取方式：（手动下载 / API / 爬虫）</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>样本范围：</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>时间区间：</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>观测单位：</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>核心变量：</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>数据频率：</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>缺失值情况：</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>可能的数据偏误：</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用限制或版权说明：</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>每次作业提交须附 AI 使用说明</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## AI 使用说明</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用工具：</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用环节：</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>关键提示词：（原文或链接）</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI 输出的主要内容：</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>人工修改与核验内容：</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>仍可能存在的问题：</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="延伸阅读" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="延伸阅读"><span class="header-section-number">7.7</span> 延伸阅读</h2>
+<ul>
+<li>Akerlof, G. A. (1970). The market for “lemons”. <em>Quarterly Journal of Economics</em>, 84(3), 488–500.</li>
+<li>Miguel, E., &amp; Kremer, M. (2004). Worms. <em>Econometrica</em>, 72(1), 159–217.</li>
+<li>Kremer, M., et al.&nbsp;(2021). Twenty-year economic impacts of deworming. <em>PNAS</em>, 118(14).</li>
+<li>Koo, R. (2008). <em>The Holy Grail of Macroeconomics</em>. Wiley.</li>
+<li>Kahneman, D. (2011). <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux.</li>
+</ul>
+<hr>
+<p><em>下一章：<a href="../../Lecture/01-DS-intro/ds_intro_02_setup.html">数据分析与经济决策（下）：流程、数据、工具与 AI</a></em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/lianxhcn\.github\.io\/ds2026\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../Lecture/00-setup/01_06_conda_env.html" class="pagination-link" aria-label="虚拟环境管理">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">虚拟环境管理</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../Lecture/01-DS-intro/ds_intro_02_setup.html" class="pagination-link" aria-label="数据分析与经济决策">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">数据分析与经济决策</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p><a href="https://www.lianxh.cn">lianxh.cn</a></p>
+</div>
+    <div class="nav-footer-right">
+<p>Support: <a href="https://lianxhcn.github.io/quarto_book/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
