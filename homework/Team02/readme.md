@@ -171,6 +171,8 @@
 
 ### 材料二：Marp 幻灯片
 
+>Marp 幻灯片的配置和使用方法，参见 [Marp 教程](https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_03_marp.html)，以及 [Marp book](https://lianxhcn.github.io/marp-book/)
+
 | 要求     | 说明                                          |
 | -------- | --------------------------------------------- |
 | 工具     | Marp（VS Code 插件）                          |
@@ -197,7 +199,7 @@
 在仓库 `submissions/25PA/` 下创建你们的文件夹：
 
 ```
-submissions/25PA/HW2-G03-现金分红新规/
+submissions/25PA/Team02-G03-现金分红新规/
 ├── README.md                  ← 必须（成员信息 + 选题摘要）
 ├── report.md                  ← 分析报告（.md 格式）
 ├── report.ipynb               ← 分析报告（.ipynb，可与 .md 二选一）
@@ -212,7 +214,7 @@ submissions/25PA/HW2-G03-现金分红新规/
 ### README.md 必填内容
 
 ```markdown
-# HW2-G03：现金分红新规覆盖范围与影响分析
+# Team02-G03：现金分红新规覆盖范围与影响分析
 
 ## 小组成员
 | 姓名 | 学号    | 分工               |
@@ -235,7 +237,7 @@ submissions/25PA/HW2-G03-现金分红新规/
 2. GitHub Desktop → **File → Clone repository** → 选择 Fork 的仓库
 3. 在 `submissions/25PA/` 下建好文件夹，放入全部文件
 4. GitHub Desktop 左下角填写 Summary → **Commit to main** → **Push origin**
-5. 点击 **Create Pull Request** → 标题格式：`[25PA/HW2-G03] 现金分红新规 · 研究设计`
+5. 点击 **Create Pull Request** → 标题格式：`[25PA/Team02-G03] 现金分红新规 · 研究设计`
 6. 等待老师审核合并
 
 > **注意**：付费数据库（Wind、CSMAR）数据禁止直接上传，请在 README 说明来源，通过坚果云分享后在群内告知老师。
