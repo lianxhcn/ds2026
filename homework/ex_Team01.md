@@ -1,17 +1,7 @@
 
 # 小组作业说明
 
-我提供了多个备选的主题，各个小组可以根据你们的兴趣和能力选择一个主题进行分析。
-
-- [备选主题-Topics](https://github.com/lianxhcn/ds2026/tree/main/homework/Team01)
-
-- 确定选题后请在课程群里自行组织接龙，登记选题。
-   ```raw
-   #接龙 第一次小组作业选题登记
-   1. 组长姓名-G#-T-xx
-   ```
-- **注意：** 同一个题目最多可以有 2 个小组选择。我建议各位根据兴趣选择题目，而不是难易程度。
-
+详情参见：[Team02/readme.md](https://github.com/lianxhcn/ds2026/blob/main/homework/Team02/readme.md)
 
 ## 补充说明
 

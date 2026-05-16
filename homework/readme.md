@@ -3,11 +3,15 @@
 <!-- 
 - **第三次个人作业** 已经发布：
   - [ex_P03.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P03_Panel-capital_strucuture.md)
-  - 提交**截止时间**：2026 年 4 月 26 日 23:30
+  - 提交**截止时间**：2026 年 4 月 26 日 23:30 -->
 
 - **第二次个人作业** 已经发布：
   - [ex_P02.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P02_get_clean_fin_data.md)
-  - 提交**截止时间**：2026 年 4 月 8 日 23:30 -->
+  - 提交**截止时间**：2026 年 5 月 22 日 23:30
+- **第二次小组作业** 已经发布：
+  - [ex_Team02.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_Team02.md)
+  - 提交**截止时间**：2026 年 5 月 23 日 21:30
+
 
 - **第一次个人作业** 已经发布：
   - [ex_P01.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P01.md)
