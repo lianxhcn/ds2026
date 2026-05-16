@@ -420,13 +420,7 @@ output/tables/yearly_summary.xlsx
 
 绘制上述行业在 2000 年至最新可得年份期间的年平均负债率时序图：
 
-$$
-\overline{\operatorname{Lev}}_{g,t}
-=
-\frac{1}{N_{g,t}}
-\sum_{i \in g}
-\operatorname{Lev}_{i,t}.
-$$
+$$\overline{\operatorname{Lev}}_{g,t}=\frac{1}{N_{g,t}}\sum_{i \in g}\operatorname{Lev}_{i,t}.$$
 
 要求：
 
