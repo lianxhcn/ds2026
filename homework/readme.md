@@ -16,7 +16,7 @@
   - [ex_P02b.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P02b_clean_CSMAR_data.md)
   - 提交**截止时间**：2026 年 5 月 22 日 23:30
 - **第二次小组作业** 已经发布：
-  - [ex_Team02.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_Team02.md)
+  - [ex_Team02.md](https://github.com/lianxhcn/ds2026/blob/main/homework/Team02/readme.md)
   - 提交**截止时间**：2026 年 5 月 23 日 21:30
 
 ---
