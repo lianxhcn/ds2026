@@ -19,7 +19,12 @@
 
 ### 1.1 下载 CSMAR 数据
 
-下载 [CSMAR](https://pan.sysu.edu.cn/link/AA1F301427054F4DAAB7B034C91952C8AD) 文件夹到本地。
+下载 CSMAR 文件夹到本地：
+- 链接：<https://pan.sysu.edu.cn/link/AAF144310393AF430DAD66672C8254B42D>
+- 提取码：Kdxh
+- 文件夹名：CSMAR
+- 有效期限：2026-06-30 11:15
+
 
 该文件夹中的 `data_raw_zip/` 子文件夹包含 7 个 `.zip` 文件，均来自 CSMAR(国泰安) 数据库。本次作业所需变量都可以在这 7 个文件中找到。
 
