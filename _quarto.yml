@@ -59,9 +59,9 @@ book:
         - Lecture/data_get_data/lecture_get_data.ipynb 
         - Lecture/data_get_data/data_02_get_data_GMD.ipynb
         - Lecture/data_get_data/data_03_TS_SZ_index.ipynb
-        - Lecture/data_store_structure/lecture_data_management_organization.ipynb
-        - Lecture/data_manage/lecture_data_management.md
+        - Lecture/data_manage/lecture_data_management.ipynb
         - Lecture/data_clean/lecture_data_clean.ipynb 
+        - Lecture/data_eda/lec_data_eda_viz.ipynb
     
     - part: "**可视化**"
       chapters: 
@@ -120,13 +120,6 @@ book:
     #     - Lecture/method_MLE/MLE_lec.qmd
     #     - Lecture/method_MLE/MLE_codes.ipynb
     #     - Lecture/method_MLE/MLE_case.ipynb
-  
-    # - part: "**机器学习**"
-    #   chapters:
-    #     - Lecture/ml_tree/ml_tree_lec.ipynb
-    #     - Lecture/ml_tree/ml_tree_codes.ipynb
-    #     - Lecture/ml_SVM/ml_SVM_lec.ipynb
-    #     - Lecture/ml_SVM/ml_SVM_codes.ipynb
 
     - part: "**文本分析**"
       chapters:
@@ -135,6 +128,12 @@ book:
         - Lecture/text_analysis/lecture_text_analysis_01_claude.ipynb
         - Lecture/text_analysis/lecture_text_analysis_02_claude.ipynb
 
+    - part: "**机器学习**"
+      chapters:
+        - Lecture/ml_tree/ml_tree_lec.ipynb
+        - Lecture/ml_tree/ml_tree_codes.ipynb
+        - Lecture/ml_SVM/ml_SVM_lec.ipynb
+        - Lecture/ml_SVM/ml_SVM_codes.ipynb
 
     - part: "**附录：Python 提示词**"
       chapters:

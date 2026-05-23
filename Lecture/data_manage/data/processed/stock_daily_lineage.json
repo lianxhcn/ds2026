@@ -1,0 +1,20 @@
+{
+  "source_file": "data/raw/stock_daily_raw.csv",
+  "output_file": "data\\processed\\stock_daily.parquet",
+  "source_desc": "模拟数据，用于演示",
+  "created_at": "2026-05-24T00:23:46",
+  "row_count": 25000,
+  "columns": [
+    "date",
+    "ticker",
+    "close",
+    "volume"
+  ],
+  "date_range": "2022-01-03 ~ 2023-12-01",
+  "null_counts": {
+    "date": 0,
+    "ticker": 0,
+    "close": 0,
+    "volume": 0
+  }
+}

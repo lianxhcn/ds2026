@@ -61,16 +61,16 @@
     <lastmod>2026-04-02T00:30:55.415Z</lastmod>
   </url>
   <url>
-    <loc>https://lianxhcn.github.io/ds2026/Lecture/data_store_structure/lecture_data_management_organization.html</loc>
-    <lastmod>2026-04-01T20:02:58.243Z</lastmod>
-  </url>
-  <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/data_manage/lecture_data_management.html</loc>
-    <lastmod>2026-04-02T02:56:13.125Z</lastmod>
+    <lastmod>2026-05-23T18:12:18.784Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/data_clean/lecture_data_clean.html</loc>
     <lastmod>2026-03-31T10:13:23.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/data_eda/lec_data_eda_viz.html</loc>
+    <lastmod>2026-05-23T18:37:07.318Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/data_visual/graph_01_intro.html</loc>
@@ -127,6 +127,22 @@
   <url>
     <loc>https://lianxhcn.github.io/ds2026/Lecture/text_analysis/lecture_text_analysis_02_claude.html</loc>
     <lastmod>2026-03-31T10:00:15.190Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_tree/ml_tree_lec.html</loc>
+    <lastmod>2026-04-30T00:25:18.434Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_tree/ml_tree_codes.html</loc>
+    <lastmod>2026-04-30T00:23:46.077Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_SVM/ml_SVM_lec.html</loc>
+    <lastmod>2026-04-29T19:48:49.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lianxhcn.github.io/ds2026/Lecture/ml_SVM/ml_SVM_codes.html</loc>
+    <lastmod>2026-04-30T07:37:48.683Z</lastmod>
   </url>
   <url>
     <loc>https://lianxhcn.github.io/ds2026/appendix_python/index.html</loc>
