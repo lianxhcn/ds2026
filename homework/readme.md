@@ -6,10 +6,13 @@
 
 >&#x1F353; **[点此提交作业](https://send2me.cn/JQP4AtjE/TVa8qKMHpUP3Kg)**
 
-<!-- 
+
 - **第三次个人作业** 已经发布：
-  - [ex_P03.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P03_Panel-capital_strucuture.md)
-  - 提交**截止时间**：2026 年 4 月 26 日 23:30 -->
+  - [[ex_P03]](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P03/)
+  - 可以从 6 个作业题目中任选一个进行完成，提交时请注明题目编号（如 `P03a`、`P03b` 等）
+  - 提交**截止时间**：2026 年 6 月 4 日 23:30
+
+---
 
 - **第二次个人作业** 已经发布：以下两个任务根据自己的兴趣选一个即可
   - [ex_P02a.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P02a_get_clean_fin_data.md)
@@ -19,7 +22,6 @@
   - [ex_Team02.md](https://github.com/lianxhcn/ds2026/blob/main/homework/Team02/readme.md)
   - 提交**截止时间**：2026 年 5 月 23 日 21:30
 
----
 
 - **第一次个人作业** 已经发布：
   - [ex_P01.md](https://github.com/lianxhcn/ds2026/blob/main/homework/ex_P01.md)
